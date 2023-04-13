@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifal</title>
+    <link rel="icon" href="img/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" class="rel">
+</head>
+<body>
+    <div class="maincontainer">
+        <img class="background1" src="img/Background-Looper.svg">
+        <!-- The header will contain logo, nav bar and language settings -->
+        <header class="menuDesktop">
+            <!-- Inside the header, there is a div that contains the logo and the name of the app/company -->
+            <div class="brand">
+                <a href="#home" class="nav-link" id="nav-link">
+                    <img src="img/icons/logo.svg" alt="Verifal logo">
+                    <p>Verifal</p>
+                </a>
+                <!-- <p>Verifal</p> -->
+            </div>
+            <nav>
+                <ul>
+                    <!-- TO DO: JS. NO HOVERING WHILE A LINK IS ACTIVE -->
+                    <li class="nav-item activelinks">
+                        <a href="#home" class="nav-link" id="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#proposal" class="nav-link" id="nav-link">Proposal</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#press" class="nav-link" id="nav-link">Press</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#about" class="nav-link" id="nav-link">About</a>
+                    </li>
+                    <!-- TO DO: JS. ON CLICK GOES TO .DOWNLOAD ACTIVE -->
+                    <li class="nav-item-button">
+                        <button class="download">Download</button>
+                    </li>
+                </ul>
+            </nav>
+            <button class="language">English</button>
+        </header>
+        <!-- Hamburger menu for mobile devices -->
+        <header class="menuMobile">
+            <div class="brand">
+                <a href="#home" class="nav-link" id="nav-link">
+                    <img src="img/icons/logo.svg" alt="Verifal logo">
+                </a>
+            </div>
+            <div class="open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="hamburger">
+                <button class="close">x</button>
+                    <ul>
+                        <li><a href="#home" class="nav-links">HOME</a></li>
+                        <li><a href="#proposal" class="nav-links">PROPOSAL</a></li>    
+                        <li><a href="#press" class="nav-links">PRESS</a></li>    
+                        <li><a href="#about" class="nav-links">ABOUT</a></li>    
+                    </ul>            
+                </nav>
+        </header>
+        <!-- Divide the different pages into sections with ID -->
+        <section id="home">
+            <button class="button-scroll">
+                <img src="img/arrowScroll.svg" alt="button to scroll">
+            </button>
+            <div class="social-networks">
+                <button>
+                    <img src="img/icons/icon/sn-instagram.svg" alt="instagram button">
+                </button>
+                <button>
+                    <img src="img/icons/icon/sn-linkedin.svg" alt="linkedin button">
+                </button>
+                <button>
+                    <img src="img/icons/icon/sn-twitter.svg" alt="twitter button">
+                </button>
+                <button>
+                    <img src="img/icons/icon/sn-pinterest.svg" alt="pinterest button">
+                </button>
+            </div> 
+            <div class="home-content">
+                <p>Become part of</p>
+                <h1>the <span class="gradient-text">information revolution</span></h1>
+                <img src="img/mockup01.svg" alt="Home Verifal App">
+                <button class="download" id="CTAhome">Download</button>
+            </div>       
+        </section>
+        <section id="proposal"></section>
+        <section id="press"></section>
+        <section id="about"></section>
+        <!-- SCROLL PROGRESS -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <footer>
+            <span class="footer-bar"></span>
+        </footer>
+    </div>
+    <script src="js/functions.js"></script>
+</body>
+</html>
