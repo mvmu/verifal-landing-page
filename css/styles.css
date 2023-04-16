@@ -73,8 +73,8 @@ html, body {
 
 .maincontainer {
     /* display: grid; */
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -510,7 +510,7 @@ section p {
 
 /* RESPONSIVE BREAKPOINTS 320, 480 (horizontal - mobile), 760, 1024, 1200, 1600 */
 
-@media screen and (min-width: 480px) and (max-width: 760px) {
+/* @media screen and (min-width: 480px) and (max-width: 760px) {
     #home {
         grid-template-columns: 10% 40% 40% 10%;
         grid-template-rows: 13% 65% auto;
@@ -591,8 +591,6 @@ section p {
 
 @media screen and (min-width: 761px) and (max-width: 1024px) {
     .maincontainer {
-        width: 100%;
-        height: 100%;
         padding: 0 20px;
         overflow: hidden;
     }
@@ -602,9 +600,6 @@ section p {
     header.menuMobile {
         display: none;
     }
-    /* .maincontainer img:first-child {
-        /* top: 0; 
-    } */
     .button-scroll {
         top: calc(100vh - 500px);
         display: block;
@@ -634,4 +629,4 @@ section p {
     header.menuDesktop {
         display: flex;
     }
-}
+} */
