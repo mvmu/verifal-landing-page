@@ -67,7 +67,8 @@ html, body {
     right: 0;
     opacity: 0.7;
     z-index: -1;
-    transform: translateX(165px);
+    object-fit: cover;
+    object-position: 54vw 0;
 }
 
 .maincontainer {
@@ -160,10 +161,10 @@ a:hover {
 .download {
     appearance: none;
     -webkit-appearance: none;
-    padding: 8px 25px;
+    padding: 8px 40px;
     font-family: 'Poppins';
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 16px;
     color: white;
     background: radial-gradient(farthest-corner at -59px -48px,#E7181C 66.4%, #F07577 96.78%);
