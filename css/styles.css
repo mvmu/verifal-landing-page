@@ -64,10 +64,10 @@ html, body {
 .background1 {
     width: 114vh; 
     position: absolute;
-    right: -181px;
-    top: 0;
+    right: 0;
     opacity: 0.7;
     z-index: -1;
+    transform: translateX(165px);
 }
 
 .maincontainer {
