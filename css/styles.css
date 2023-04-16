@@ -56,7 +56,6 @@ body {
 html, body {
     /* default values for mobile */
     width: 100vw;
-    height: 100vh;
     scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: scroll;
