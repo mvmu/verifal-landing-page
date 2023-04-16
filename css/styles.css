@@ -62,8 +62,7 @@ html, body {
 }
 
 .background1 {
-    width: 158vw; 
-    /* width: 118vh; */
+    width: 114vh; 
     position: fixed;
     right: -181px;
     top: 0;
@@ -109,12 +108,8 @@ header.menuDesktop {
 }
 
 header .brand img {
-    height: 11vw;
+    height: 17vw;
     max-height: 85px;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: auto;
     margin-bottom: -23%;
     margin-top: -6px;
 }
@@ -365,8 +360,7 @@ section {
 #home {
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 20% 65% auto;
-    height: 100%;
+    grid-template-rows: 20% 65% 15%;
 }
 
 .home-text {
@@ -427,8 +421,7 @@ section p {
 }
 
 .home-img img {
-    height: 95vw;
-    max-height: 330px;
+        max-height: 107vw;
     margin-bottom: -20%;
     position: relative;
     /* positioning the img element without breaking the normal flow */
@@ -439,14 +432,22 @@ section p {
     display: flex;
     justify-content: center;
     grid-row: 3 / 4;
-    grid-column: 2 / 3;
+    grid-column: 1 / 4;
+}
+
+.markets-img {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 7% 5%;
 }
 
 .markets img {
     /* box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8); */
     filter: drop-shadow(2px 4px 10px rgba(166, 171, 189, 0.8));
-    height: 35%;
-    margin: 10% 5%;
+    height: 12vw; /* TODO ADD MEDIA QUERY BP FOR THIS */
+    max-width: 100px;
+    /* margin: 10% 5%; */
     border-radius: 7px;
 }
 
@@ -457,8 +458,8 @@ section p {
 #CTAhome {
     box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8);
     position: relative;
-    width: 35vw;
-    max-width: 40vw;
+    /* width: 35vw;
+    max-width: 40vw; */
     font-size: 5vw;
     z-index: 2;
 }
@@ -483,7 +484,8 @@ section p {
 }
 
 .social-networks button img {
-    width: 4.2vw;
+    width: 8vw;     /* TO DO, CHECK THIS IN MQ */
+    max-width: 36px;
 }
 
 /* SCROLL PROGRESS */
