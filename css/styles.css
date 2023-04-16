@@ -439,7 +439,7 @@ section p {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    padding: 7% 5%;
+    padding: 5% 5%;
 }
 
 .markets img {
@@ -503,7 +503,6 @@ section p {
  
 .progress-bar {
     background-color: var(--main-color);
-    border-radius: 10px;
     width: 0;
     display: block;
     z-index: 10;
