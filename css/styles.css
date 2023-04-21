@@ -514,10 +514,11 @@ section p {
     padding: 3%;
     background: var(--bg-white-bigCard);
     background-blend-mode: luminosity;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(1px);
     border-radius: 46px 0 0 46px;
     position: relative;
     left: 3%;
+    border: 1px solid black;
 }
 
 .cardsContainerColumn1 {
@@ -526,7 +527,7 @@ section p {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    padding-top: 5%;
+    padding-top: 3%;
     position: absolute;
 } 
 
@@ -543,14 +544,14 @@ section p {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    padding-left: 3%;
+    min-width: -webkit-fill-available;
 }
 
 .cardFeature {
-    width: 120%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
     background-color: white;
     box-shadow: var(--neumorphic);
     padding: 5% 10%;    
@@ -560,6 +561,18 @@ section p {
 .cardFeature img {
     width: 1.3em;
     height: auto;
+}
+
+.featureTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featureDescription {
+    font-size: 12px;
+    display: none;
 }
 
 /* SCROLL PROGRESS */

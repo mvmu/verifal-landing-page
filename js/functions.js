@@ -66,6 +66,30 @@ const isMobile = navigator.userAgentData.mobile; //resolves true/false
 
 const headerDesktop = document.querySelector(".menuDesktop");
 const headerMobile = document.querySelector(".menuMobile");
+const proposalButtons = document.querySelectorAll(".cardFeature");
+
+// PROPOSAL FUNCTIONS
+
+//  Dropdown description in cards
+
+proposalButtons.forEach(button => {
+	button.addEventListener("click", () => {
+		const display = button.querySelector(".featureDescription").style.display;
+		closeAllButtons();
+		if (display === "block") {
+			button.querySelector(".featureDescription").style.display = "none";
+		} else {
+			button.querySelector(".featureDescription").style.display = "block";
+		}
+	});
+})
+
+function closeAllButtons() {
+	proposalButtons.forEach(button => {
+		button.querySelector(".featureDescription").style.display = "none";
+	});
+}
+
 
 // SCROLL FUNCTIONS
 
