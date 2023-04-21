@@ -161,11 +161,12 @@ a:hover {
 .download {
     appearance: none;
     -webkit-appearance: none;
-    padding: 8px 40px;
+    width: 90%;
+    padding: 1px 40px;
     font-family: 'Poppins';
     font-size: 1em;
     font-weight: 500;
-    border-radius: 16px;
+    border-radius: 7px;
     color: white;
     background: radial-gradient(farthest-corner at -59px -48px,#E7181C 66.4%, #F07577 96.78%);
     cursor: pointer;
@@ -176,7 +177,7 @@ a:hover {
     background: var(--bg-white);
     box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8);
     color: var(--main-color);
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease;
 }
 
 .download .active {
@@ -186,7 +187,7 @@ a:hover {
     background-clip: text;
     -webkit-background-clip: text;
     /* -webkit-text-fill-color: transparent; */
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease;
     border: 1px solid var(--main-color);
 }
 

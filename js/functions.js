@@ -62,6 +62,7 @@
 
 
 const headerDesktop = document.querySelector(".menuDesktop");
+const headerMobile = document.querySelector(".menuMobile");
 
 // SCROLL FUNCTIONS
 
@@ -74,9 +75,11 @@ function headerScrollEffect(){
 		let scroll = getCurrentScroll();
 			if(scroll >= blurHeaderBond){
 				headerDesktop.classList.add("reduced");
+				headerMobile.classList.add("reduced");
                 console.log("haciendo scroll");
 			}else{
 				headerDesktop.classList.remove("reduced");
+				headerMobile.classList.remove("reduced");
                 console.log("no scroll");
 			} 
 		});
