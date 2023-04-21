@@ -582,6 +582,29 @@ section p {
     display: none;
 }
 
+/* part II --> slider */
+
+.sliderContainer {
+    margin-top: 10%;
+}
+
+.titleSliderContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sliderProposal {
+    background: var(--bg-white-bigCard);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(1px);
+    padding: 3%;
+    margin-top: 10%;
+    position: relative;
+    top: -20vw;
+    width: 80%;
+    border-radius: 20px;
+}
+
 /* SCROLL PROGRESS */
 .progress-container {
     width: 100%;

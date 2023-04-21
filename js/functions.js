@@ -61,7 +61,8 @@
 // }
 
 
-const isMobile = navigator.userAgentData.mobile; //resolves true/false
+// const isMobile = navigator.userAgentData.mobile; //resolves true/false. PROBLEM
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); // SOLUTION
 
 
 const headerDesktop = document.querySelector(".menuDesktop");
