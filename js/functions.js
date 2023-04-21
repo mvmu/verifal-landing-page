@@ -94,6 +94,85 @@ function closeAllButtons() {
 	});
 }
 
+// Slider
+
+const prevBoton = document.querySelector("#prev");
+const nextBoton = document.querySelector("#next");
+const slides = document.querySelectorAll(".slide");
+const breadcrumbs = document.querySelectorAll(".breadcrumb");
+
+let current = 0; // ACTUAL
+let maximum = slides.length - 1; // MAXIMO
+
+
+// a loop for all the pictures/slides, applying to each one a translateX value
+slides.forEach((slide,index) => {
+	slide.style.transform = `translateX(${index * 150}%)`;
+});
+
+// // activate the first dot of the breadcrumbs
+breadcrumbs.forEach((breadcrumb,index) => {
+	index === 0 ? breadcrumb.classList.add("active") : breadcrumb.classList.remove("active");
+});
+
+// paint the first dot
+function color(){
+	breadcrumbs.forEach((breadcrumb,index) => {
+		index === current ? breadcrumb.classList.add("active") : breadcrumb.classList.remove("active");
+	});
+};
+
+// move the slides
+function move(){
+	slides.forEach((slide, index) => {
+		slide.style.transform = `translateX(${150 * (index - current)}%)`;
+	});
+};
+
+// buttons (next y prev) listen an event and receive a function 
+nextBoton.addEventListener("click", () => {
+	if(current === maximum){
+		current = 0;
+	}else{
+		current++;
+	}
+	move();
+	color();
+});
+
+prevBoton.addEventListener("click", () => {
+	if(current === 0){
+		current = maximum;
+	}else{
+		current--;
+	}
+	move();
+	color();
+});
+
+// add click event to the dots
+
+breadcrumbs.forEach((breadcrumb,index) => {
+	breadcrumb.addEventListener("click", () => {
+		current = index;
+		move();
+		color();
+	});
+});
+
+// add automatic slide move
+
+setInterval(function() {
+	if(current === maximum){
+		current = 0;
+	}else{
+		current++;
+	}
+	move();
+	color();	
+},5000);
+
+
 
 // SCROLL FUNCTIONS
 
