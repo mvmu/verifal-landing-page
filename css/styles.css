@@ -29,6 +29,7 @@
       text-align:var(--button-text-align);
     } */
 
+    /* GENERAL SETTINGS */
 :root {
     /* colors */
     --main-color: #E7181C;
@@ -36,15 +37,18 @@
     --color-secondary-lightestred: #F17477;
     --gradient: linear-gradient(to right, #E7181C 66.4%, #F07577 96.78%); 
     --bg-white: #FAFBFF;
+    --bg-white-bigCard: rgba(245, 245, 245, 0.5);
     --color-black: #272221;
+    
     /* shadows */
     --shadow1: -10px -10px 20px var(--bg-white);
     --shadow2: 5px 5px 20px rgba(166, 171, 189, 0.8);
-    /* --neumorphic */
 
-    --neumorphic:
+    /* --neumorphic shadow, composed by the previously declared shadows*/
+    --neumorphic {
         var(--shadow1)
         var(--shadow2);
+    }
 }
 
 body {
@@ -76,6 +80,16 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
 /* LOGO */
@@ -487,6 +501,23 @@ section p {
 .social-networks button img {
     width: 8vw;     /* TO DO, CHECK THIS IN MQ */
     max-width: 36px;
+}
+
+/* SECTION #2 */
+
+.cardsContainer {
+    width: 90vw;
+    height: 60%;
+    background: var(--bg-white-bigCard);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(3px);
+    border-radius: 83px 83px 46px 46px;
+}
+
+.cardFeature {
+    background-color: white; 
+    box-shadow: -10px -10px 20px #FAFBFF, 5px 5px 20px rgba(166, 171, 189, 0.8);
+    border-radius: 16px;
 }
 
 /* SCROLL PROGRESS */
