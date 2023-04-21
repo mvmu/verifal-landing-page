@@ -510,7 +510,7 @@ section p {
     display: grid;
     grid-template: 0 / 50% 50%;    
     width: 95vw;
-    height: 60%;
+    height: 65%;
     padding: 3%;
     background: var(--bg-white-bigCard);
     background-blend-mode: luminosity;
@@ -550,17 +550,24 @@ section p {
 .cardFeature {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
     background-color: white;
     box-shadow: var(--neumorphic);
-    padding: 5% 10%;    
+    padding: 5% 7%;
     border-radius: 16px;
 }
 
 .cardFeature img {
     width: 1.3em;
     height: auto;
+}
+
+.cardFeature .flippable {
+    width: 0.5em;
+    align-self: center;
+    margin-top: 3%;
+    transition: transform 1s ease;
 }
 
 .featureTitle {

@@ -78,8 +78,10 @@ proposalButtons.forEach(button => {
 		closeAllButtons();
 		if (display === "block") {
 			button.querySelector(".featureDescription").style.display = "none";
+			button.querySelector(".flippable").style.transform = "scaleY(1)";
 		} else {
 			button.querySelector(".featureDescription").style.display = "block";
+			button.querySelector(".flippable").style.transform = "scaleY(-1)";
 		}
 	});
 })
@@ -87,6 +89,7 @@ proposalButtons.forEach(button => {
 function closeAllButtons() {
 	proposalButtons.forEach(button => {
 		button.querySelector(".featureDescription").style.display = "none";
+		button.querySelector(".flippable").style.transform = "scaleY(1)";
 	});
 }
 
