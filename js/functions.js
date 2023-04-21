@@ -61,6 +61,9 @@
 // }
 
 
+const isMobile = navigator.userAgentData.mobile; //resolves true/false
+
+
 const headerDesktop = document.querySelector(".menuDesktop");
 const headerMobile = document.querySelector(".menuMobile");
 
@@ -70,16 +73,15 @@ const headerMobile = document.querySelector(".menuMobile");
 
 function headerScrollEffect(){
     // Define the scroll limit in order to reduce the header size and apply the 'reduced' class
-	const blurHeaderBond = 100; 
+	const blurHeaderBond = isMobile ? 30 : 100; 
+	const platformClassList = isMobile ? headerMobile.classList : headerDesktop.classList;
 	window.addEventListener("scroll", () => {
 		let scroll = getCurrentScroll();
 			if(scroll >= blurHeaderBond){
-				headerDesktop.classList.add("reduced");
-				headerMobile.classList.add("reduced");
+				platformClassList.add("reduced");
                 console.log("haciendo scroll");
 			}else{
-				headerDesktop.classList.remove("reduced");
-				headerMobile.classList.remove("reduced");
+				platformClassList.remove("reduced");
                 console.log("no scroll");
 			} 
 		});
