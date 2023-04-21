@@ -39,16 +39,15 @@
     --bg-white: #FAFBFF;
     --bg-white-bigCard: rgba(245, 245, 245, 0.5);
     --color-black: #272221;
-    
+
     /* shadows */
     --shadow1: -10px -10px 20px var(--bg-white);
     --shadow2: 5px 5px 20px rgba(166, 171, 189, 0.8);
 
     /* --neumorphic shadow, composed by the previously declared shadows*/
-    --neumorphic {
-        var(--shadow1)
+    --neumorphic:
+        var(--shadow1),
         var(--shadow2);
-    }
 }
 
 body {
@@ -88,8 +87,8 @@ h2 {
 }
 
 h3 {
-    font-size: 1.1em;
-    font-weight: 400;
+    font-size: 1em;
+    font-weight: 500;
 }
 
 /* LOGO */
@@ -370,10 +369,12 @@ header.menuMobile .brandName p {
 section {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 /* First, the general values for all the sections in the document */
 
-#home {
+.home {
     display: grid;
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: 20% 65% 15%;
@@ -506,18 +507,59 @@ section p {
 /* SECTION #2 */
 
 .cardsContainer {
-    width: 90vw;
+    display: grid;
+    grid-template: 0 / 50% 50%;    
+    width: 95vw;
     height: 60%;
+    padding: 3%;
     background: var(--bg-white-bigCard);
     background-blend-mode: luminosity;
     backdrop-filter: blur(3px);
-    border-radius: 83px 83px 46px 46px;
+    border-radius: 46px 0 0 46px;
+    position: relative;
+    left: 3%;
+}
+
+.cardsContainerColumn1 {
+    grid-column: 1;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 5%;
+    position: absolute;
+} 
+
+.cardsContainerColumn1 img {
+    width: 120%;
+    position: relative;
+    bottom: -5%;
+}
+
+.cardsContainerColumn2 {
+    position: absolute;
+    grid-column: 2;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 3%;
 }
 
 .cardFeature {
-    background-color: white; 
-    box-shadow: -10px -10px 20px #FAFBFF, 5px 5px 20px rgba(166, 171, 189, 0.8);
+    width: 120%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: var(--neumorphic);
+    padding: 5% 10%;    
     border-radius: 16px;
+}
+
+.cardFeature img {
+    width: 1.3em;
+    height: auto;
 }
 
 /* SCROLL PROGRESS */
