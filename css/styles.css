@@ -65,13 +65,13 @@ html, body {
 }
 
 .background1 {
-    width: 114vh; 
+    width: 126vh;
     position: absolute;
     right: 0;
     opacity: 0.7;
     z-index: -1;
     object-fit: cover;
-    object-position: 54vw 0;
+    object-position: 57vw 0;
 }
 
 .maincontainer {
@@ -514,12 +514,12 @@ section p {
     padding: 3%;
     background: var(--bg-white-bigCard);
     background-blend-mode: luminosity;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
     border-radius: 46px 0 0 46px;
     position: relative;
     left: 3%;
-    border: 1px solid black;
     margin-bottom: 10%;
+    box-shadow: var(--shadow2);
 }
 
 .cardsContainerColumn1 {
@@ -609,7 +609,7 @@ section p {
 .sliderProposal {
     background: var(--bg-white-bigCard);
     background-blend-mode: luminosity;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
     padding: 3%;
     margin-top: -30%;
     /* position: relative; */
@@ -618,6 +618,7 @@ section p {
     height: 55%;
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: var(--neumorphic);
     /* border: 1px solid black; */
 }
 
@@ -659,7 +660,8 @@ section p {
 }
 
 #next {
-    right: 0;
+    right: 7px; 
+    /* Horizontal alignment better with px, it must be an absolute measure */
     top: 35%;
     transform: rotate(-90deg);
 }
@@ -672,9 +674,8 @@ section p {
 
 .breadcrumbs {
     position: absolute;
-    top: 30%;
+    top: 45%;
     right: 15%;
-    /* top: -7%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -682,12 +683,12 @@ section p {
 }
 
 .breadcrumb {
-	border-radius: 50%;
-	width: 0.3em;
-	height: 0.3em;
-	background-color: darkslategray;
-	cursor: pointer;
-	margin-right: 15px;
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: var(--color-black);
+    cursor: pointer;
+    margin-right: 15px;
 }
 
 .breadcrumb:last-child {
@@ -699,7 +700,16 @@ section p {
 	width: 1.2em;
 	border-radius: 0.8em;
 	transition: width, 2s, ease-in;
+}
 
+#proposal .background1 {
+    transform: scaleX(-1);
+    object-fit: cover;
+    object-position: -50vw -43vw;
+    width: 206vw;
+    position: absolute;
+    top: 147vh;
+    opacity: 0.3;
 }
 
 /* SCROLL PROGRESS */
