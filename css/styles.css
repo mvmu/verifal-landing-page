@@ -237,9 +237,9 @@ header.menuMobile {
     left: 0;
 	z-index: 3;
     width: 100vw;
-	height: 60px;
+	height: 10%;
     padding: 10px;
-} 
+}
 
 header.menuMobile .brandName p {
     font-size: 1.3em;
@@ -510,7 +510,7 @@ section p {
     display: grid;
     grid-template: 0 / 50% 50%;    
     width: 95vw;
-    height: 65%;
+    height: 50%;
     padding: 3%;
     background: var(--bg-white-bigCard);
     background-blend-mode: luminosity;
@@ -519,6 +519,7 @@ section p {
     position: relative;
     left: 3%;
     border: 1px solid black;
+    margin-bottom: 10%;
 }
 
 .cardsContainerColumn1 {
@@ -585,12 +586,12 @@ section p {
 /* Proposal Part II --> slider */
 
 .sliderContainer {
-    margin-top: 10%;
     display: flex;
-    height: 60%;
+    height: 50%;
     flex-direction: column;
     position: relative;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .titleSliderContainer {
@@ -601,6 +602,8 @@ section p {
 
 .titleSliderContainer img {
     z-index: 3;
+    position: relative;
+    top: -15%;
 }
 
 .sliderProposal {
@@ -612,22 +615,26 @@ section p {
     /* position: relative; */
     top: -30%;
     width: 90%;
-    height: 100%;
+    height: 55%;
     overflow: hidden;
     border-radius: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+#proposal {
+    height: 130vh; /* override */
 }
 
 .slide {
-    width: 100%;
-    height: 100%;
+    height: 90%;
     position: absolute;
+    top: 0;
+    left: 0;
     transition: transform, 0.5s;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 3%;
 }
 
 .sliderProposal button {
@@ -636,6 +643,7 @@ section p {
     position: absolute;
     border: none;
     background: none;
+    height: 0.9vw;
 }
 
 .slide p {
@@ -645,28 +653,31 @@ section p {
 }
 
 #prev {
-    right: 30%;
+    left: 0;
+    top: 35%;
     transform: rotate(90deg);
 }
 
 #next {
     right: 0;
+    top: 35%;
     transform: rotate(-90deg);
 }
 
 .slide h4 {
-    width: 70%;
+    width: 90%;
+    text-align: center;
 }
 
 
 .breadcrumbs {
-	position: absolute;
-    right: 50%;
-	bottom: 50%;
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    /* top: -7%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 5;
 }
 
