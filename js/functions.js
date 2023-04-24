@@ -211,3 +211,99 @@ function scrollEffect() {
 }
 
 
+
+// NEWS
+const newsTop = [{
+	imageSrc: "img/news/news1.jpeg",
+	imageAlt: "Sant Jordi's Day in Barcelona",
+	title: "Sant Jordi's Day",
+	newsTime: "17h",
+},
+{
+	imageSrc: "img/news/news2.jpg",
+	imageAlt: "Massive Real Madrid supporters celebrations",
+	title: "Massive Real Madrid supporters celebrations",
+	newsTime: "12h",
+},
+{
+	imageSrc: "img/news/news3.jpg",
+	imageAlt: "Diesel prices still goes up",
+	title: "Diesel prices still goes up",
+	newsTime: "30m",
+},
+{
+	imageSrc: "img/news/news4.jpg",
+	imageAlt: "Heroic rescue in Costa Brava",
+	title: "Heroic rescue in Costa Brava",
+	newsTime: "1h",
+},
+{
+	imageSrc: "img/news/news5.jpg",
+	imageAlt: "Vall D'Hebron opens a new child's room",
+	title: "Vall D'Hebron opens a new child's room",
+	newsTime: "3h",
+},
+{
+	imageSrc: "img/news/news6.jpg",
+	imageAlt: "Protests against the surrogacy",
+	title: "Protests against the surrogacy",
+	newsTime: "2h",
+}]; 
+
+const newsBottom = [];
+
+const newsSliders = document.querySelectorAll(".sliderRightNow");
+
+const newsSliderTop = newsSliders[0].querySelector(".sliderWrap");
+const newsSliderBottom = newsSliders[1].querySelector(".sliderWrap");
+
+newsTop.forEach(news => {
+	newsSliderTop.appendChild(createNewsCard(news));
+});
+
+newsBottom.forEach(news => {
+	newsSliderBottom.appendChild(createNewsCard(news));
+});
+
+
+function createNewsCard(data) {
+	const image = document.createElement("img");
+	image.src = data.imageSrc;
+	image.alt = data.imageAlt;
+	image.classList.add("news");
+
+	const title = document.createElement("h5");
+	title.innerHTML = data.title;
+
+	const card = document.createElement("div");
+	card.classList.add("sliderCardRightNow");
+
+	const timeLogo = document.createElement("img");
+	timeLogo.src = "img/news/hot-icon.svg";
+	timeLogo.alt = "hot news icon";
+	timeLogo.classList.add("iconNews");
+
+	const timeText = document.createElement("p");
+	timeText.innerHTML = data.newsTime;
+
+	const time = document.createElement("div");
+	time.classList.add("sliderCardTime");
+	time.appendChild(timeLogo);
+	time.appendChild(timeText);
+
+	card.appendChild(image);
+	card.appendChild(title);
+	card.appendChild(time);
+	return card;
+}
+
+function animationScrollCards() {
+
+}
+
+
+
+
+
+
+
