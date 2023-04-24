@@ -252,10 +252,8 @@ const newsTop = [{
 
 const newsBottom = [];
 
-const newsSliders = document.querySelectorAll(".sliderRightNow");
-
-const newsSliderTop = newsSliders[0].querySelector(".sliderWrap");
-const newsSliderBottom = newsSliders[1].querySelector(".sliderWrap");
+const newsSliderTop = document.querySelectorAll(".sliderRightNow")[0].querySelector(".sliderWrap");
+const newsSliderBottom = document.querySelectorAll(".sliderRightNow")[1].querySelector(".sliderWrap");
 
 newsTop.forEach(news => {
 	newsSliderTop.appendChild(createNewsCard(news));
@@ -265,6 +263,12 @@ newsBottom.forEach(news => {
 	newsSliderBottom.appendChild(createNewsCard(news));
 });
 
+let lastTopChild = newsSliderTop.lastElementChild;
+let lastBottomChild = newsSliderBottom.lastElementChild;
+
+newsSliderTop.addEventListener("scroll", e => {
+	console.log(e.currentTarget.scrollLeft);
+});
 
 function createNewsCard(data) {
 	const image = document.createElement("img");
@@ -295,10 +299,6 @@ function createNewsCard(data) {
 	card.appendChild(title);
 	card.appendChild(time);
 	return card;
-}
-
-function animationScrollCards() {
-
 }
 
 

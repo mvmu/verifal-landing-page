@@ -747,25 +747,17 @@ section p {
     position: relative;
 }
 
-@keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-35% * 6))}
-}
-
 /* TODO, ADD ANIMATION HERE */
 .sliderWrap {
-    animation: scroll 80s linear infinite;
     display: flex;
     height: 100%;
-    width: calc(35% * 12); /* img percentage * num of items*/
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+    width: calc(55% * 6);
 }
 
 .sliderCardRightNow {
     display: flex;
-    height: 30%;
-}
-
-.sliderCardRightNow {
     width: 55%;
     height: 100%;
     overflow: hidden;
