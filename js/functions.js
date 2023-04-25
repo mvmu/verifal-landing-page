@@ -211,7 +211,6 @@ function scrollEffect() {
 }
 
 
-
 // NEWS
 const newsTop = [{
 	imageSrc: "img/news/news1.jpeg",
@@ -227,8 +226,8 @@ const newsTop = [{
 },
 {
 	imageSrc: "img/news/news3.jpg",
-	imageAlt: "Diesel prices still goes up",
-	title: "Diesel prices still goes up",
+	imageAlt: "Plump diesel into a red car",
+	title: "Diesel prices continue going up", 
 	newsTime: "30m",
 },
 {
@@ -250,7 +249,42 @@ const newsTop = [{
 	newsTime: "2h",
 }]; 
 
-const newsBottom = [];
+const newsBottom = [{
+	imageSrc: "img/news/news1.jpeg",
+	imageAlt: "Sant Jordi's Day in Barcelona",
+	title: "Sant Jordi's Day",
+	newsTime: "17h",
+},
+{
+	imageSrc: "img/news/news2.jpg",
+	imageAlt: "Massive Real Madrid supporters celebrations",
+	title: "Massive Real Madrid supporters celebrations",
+	newsTime: "12h",
+},
+{
+	imageSrc: "img/news/news3.jpg",
+	imageAlt: "Plump diesel into a red car",
+	title: "Diesel prices continue going up", 
+	newsTime: "30m",
+},
+{
+	imageSrc: "img/news/news4.jpg",
+	imageAlt: "Heroic rescue in Costa Brava",
+	title: "Heroic rescue in Costa Brava",
+	newsTime: "1h",
+},
+{
+	imageSrc: "img/news/news5.jpg",
+	imageAlt: "Vall D'Hebron opens a new child's room",
+	title: "Vall D'Hebron opens a new child's room",
+	newsTime: "3h",
+},
+{
+	imageSrc: "img/news/news6.jpg",
+	imageAlt: "Protests against the surrogacy",
+	title: "Protests against the surrogacy",
+	newsTime: "2h",
+}];
 
 const newsSliderTop = document.querySelectorAll(".sliderRightNow")[0].querySelector(".sliderWrap");
 const newsSliderBottom = document.querySelectorAll(".sliderRightNow")[1].querySelector(".sliderWrap");
@@ -269,6 +303,7 @@ let lastBottomChild = newsSliderBottom.lastElementChild;
 newsSliderTop.addEventListener("scroll", e => {
 	console.log(e.currentTarget.scrollLeft);
 });
+
 
 function createNewsCard(data) {
 	const image = document.createElement("img");
@@ -300,6 +335,13 @@ function createNewsCard(data) {
 	card.appendChild(time);
 	return card;
 }
+
+// infinite slide function --> news slider
+setInterval
+
+newsSliderTop.addEventListener("transitionend", function () {
+firstElementChild
+})
 
 
 
