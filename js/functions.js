@@ -250,39 +250,39 @@ const newsTop = [{
 }]; 
 
 const newsBottom = [{
-	imageSrc: "img/news/news1.jpeg",
-	imageAlt: "Sant Jordi's Day in Barcelona",
-	title: "Sant Jordi's Day",
-	newsTime: "17h",
-},
-{
-	imageSrc: "img/news/news2.jpg",
-	imageAlt: "Massive Real Madrid supporters celebrations",
-	title: "Massive Real Madrid supporters celebrations",
-	newsTime: "12h",
-},
-{
-	imageSrc: "img/news/news3.jpg",
-	imageAlt: "Plump diesel into a red car",
-	title: "Diesel prices continue going up", 
-	newsTime: "30m",
-},
-{
-	imageSrc: "img/news/news4.jpg",
-	imageAlt: "Heroic rescue in Costa Brava",
-	title: "Heroic rescue in Costa Brava",
+	imageSrc: "img/news/news7.jpg",
+	imageAlt: "cards stuck in traffic",
+	title: "Long retentions due to the new traffic law",
 	newsTime: "1h",
 },
 {
-	imageSrc: "img/news/news5.jpg",
-	imageAlt: "Vall D'Hebron opens a new child's room",
-	title: "Vall D'Hebron opens a new child's room",
-	newsTime: "3h",
+	imageSrc: "img/news/news8.jpg",
+	imageAlt: "Liverpool supporters celebrating the victory",
+	title: "Liverpool FC arrives victorious",
+	newsTime: "6h",
 },
 {
-	imageSrc: "img/news/news6.jpg",
-	imageAlt: "Protests against the surrogacy",
-	title: "Protests against the surrogacy",
+	imageSrc: "img/news/news9.jpg",
+	imageAlt: "Donetsk city ruins after the war",
+	title: "Interview: memories of a war", 
+	newsTime: "7.5h",
+},
+{
+	imageSrc: "img/news/news10.jpg",
+	imageAlt: "A man starts a fire with a sparkler",
+	title: "Arrested for starting a serious forest fire",
+	newsTime: "1h",
+},
+{
+	imageSrc: "img/news/news11.jpg",
+	imageAlt: "An AirFrance plane",
+	title: "AirFrance flight attendants call a strike",
+	newsTime: "5h",
+},
+{
+	imageSrc: "img/news/news12.jpg",
+	imageAlt: "Alex Dorka running",
+	title: "Alex Dorka sets a new record in a marathon",
 	newsTime: "2h",
 }];
 
@@ -300,9 +300,9 @@ newsBottom.forEach(news => {
 let lastTopChild = newsSliderTop.lastElementChild;
 let lastBottomChild = newsSliderBottom.lastElementChild;
 
-newsSliderTop.addEventListener("scroll", e => {
-	console.log(e.currentTarget.scrollLeft);
-});
+// newsSliderTop.addEventListener("scroll", e => {
+// 	console.log(e.currentTarget.scrollLeft);
+// });
 
 
 function createNewsCard(data) {
@@ -338,17 +338,22 @@ function createNewsCard(data) {
 
 // infinite slide function --> news slider
 setInterval(() => {
-	newsSliderTop.style.transform = "translateX(-130px)";
-},1000);
+	const cardWidth = newsSliderTop.firstElementChild.offsetWidth;
+	const cardMargin = cardWidth * 0.14;
+	newsSliderTop.style.transition = "all 5s linear";
+	newsSliderTop.style.transform = `translateX(-${ cardWidth + cardMargin }px)`;
+});
 
 newsSliderTop.addEventListener('transitionend', function () {
-	newsSliderTop.appendChild(newsSliderTop.firstElementChild); //move dynamicly the first element and put it at the end to make a loop
+	newsSliderTop.appendChild(newsSliderTop.firstElementChild);
 	newsSliderTop.style.transition = "none";
 	newsSliderTop.style.transform = "translateX(0)";
 	setTimeout(() => {
-		newsSliderTop.style.transition = "15s";
+		newsSliderTop.style.transition = "all 5s linear";
 	});
 });
+
+// mejorar https://es.stackoverflow.com/questions/362808/a%C3%B1adir-efecto-transition-en-javascript-para-slider-automatico
 
 
 
