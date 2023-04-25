@@ -337,11 +337,18 @@ function createNewsCard(data) {
 }
 
 // infinite slide function --> news slider
-setInterval
+setInterval(() => {
+	newsSliderTop.style.transform = "translateX(-130px)";
+},1000);
 
-newsSliderTop.addEventListener("transitionend", function () {
-firstElementChild
-})
+newsSliderTop.addEventListener('transitionend', function () {
+	newsSliderTop.appendChild(newsSliderTop.firstElementChild); //move dynamicly the first element and put it at the end to make a loop
+	newsSliderTop.style.transition = "none";
+	newsSliderTop.style.transform = "translateX(0)";
+	setTimeout(() => {
+		newsSliderTop.style.transition = "15s";
+	});
+});
 
 
 

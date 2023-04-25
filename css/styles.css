@@ -36,6 +36,7 @@
     --color-secondary: #F07577;
     --color-secondary-lightestred: #F17477;
     --gradient: linear-gradient(to right, #E7181C 66.4%, #F07577 96.78%); 
+    --gradient-div: linear-gradient(45deg, #E7181C 35%, #F07577 90.78%);
     --bg-white: #FAFBFF;
     --bg-white-bigCard: rgba(245, 245, 245, 0.5);
     --color-black: #272221;
@@ -510,7 +511,7 @@ section p {
     max-width: 36px;
 }
 
-/* SECTION #2 */
+/* Section #2 -> PROPOSAL */
 
 .cardsContainer {
     display: grid;
@@ -812,13 +813,13 @@ section p {
     font-size: 0.7em;
 }
 
-/* SECTION #4 ABOUT US */
+/* Section #4 -> ABOUT */
 
 .aboutUs {
     width: 100%;
     height: 55%;
     /* background-color: var(--color-secondary-lightestred); */
-    background-image: var(--gradient);
+    background-image: var(--gradient-div);
     border-radius: 1em 1em 0 0;
     padding: 3%;
     overflow: hidden;
@@ -829,6 +830,12 @@ section p {
 .aboutUs h2 {
     text-align: center;
     color: var(--bg-white);
+    margin-bottom: 5%;
+}
+
+.aboutUs .contentAbout {
+    color: var(--bg-white);
+    text-align: center;
 }
 
 /* SCROLL PROGRESS */
