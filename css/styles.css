@@ -416,7 +416,8 @@ h1 .gradient-text {
 
 section p {
     width: 100%;
-    font-size: 5vw;
+    /* font-size: 5vw; */
+    font-size: 1em;
     color: var(--color-secondary);
     text-align: center;
 }
@@ -560,7 +561,7 @@ section p {
     flex-direction: column;
     width: 90%;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: var(--bg-white);
     box-shadow: var(--neumorphic);
     padding: 5% 7%;
     border-radius: 16px;
@@ -575,7 +576,7 @@ section p {
     width: 0.5em;
     align-self: center;
     margin-top: 3%;
-    transition: transform 1s ease;
+    transition: transform 0.5s ease;
 }
 
 .featureTitle {
@@ -586,7 +587,7 @@ section p {
 }
 
 .featureDescription {
-    font-size: 12px;
+    font-size: 0.8em;
     display: none;
 }
 
@@ -813,13 +814,17 @@ section p {
 
 /* Section #4 -> ABOUT */
 
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
 .aboutUs {
     width: 100%;
-    height: 55%;
-    /* background-color: var(--color-secondary-lightestred); */
+    height: 52%;
     background-image: var(--gradient-div);
     border-radius: 1em 1em 0 0;
-    padding: 3%;
+    padding: 3% 5% 0 5%;
     overflow: hidden;
     position: relative;
     right: 0;
@@ -835,6 +840,43 @@ section p {
     color: var(--bg-white);
     text-align: center;
 }
+
+.contentAbout p {
+    color: var(--bg-white);
+}
+
+.contentAbout h4 {
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    margin-top: 7%;
+    background-color: var(--bg-white);
+    border-radius: 1em 1em 0 0;
+}
+
+/* FAQS microsection, inside ABOUT */
+
+.faqCard {
+    border: 1px solid var(--main-color);
+    border-top: none;
+    border-radius: 0 0 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+.faqCard .flippable {
+    width: 0.5em;
+    transition: transform 0.5s ease;
+    align-self: center;
+    margin-top: 3%;
+}
+
+.answerFaq {
+    display: none;
+    font-size: 0.8em;
+}
+
 
 /* SCROLL PROGRESS */
 .progress-container {

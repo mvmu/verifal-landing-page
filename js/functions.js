@@ -85,14 +85,14 @@ proposalButtons.forEach(button => {
 			button.querySelector(".flippable").style.transform = "scaleY(-1)";
 		}
 	});
-})
+});
 
 function closeAllButtons() {
 	proposalButtons.forEach(button => {
 		button.querySelector(".featureDescription").style.display = "none";
 		button.querySelector(".flippable").style.transform = "scaleY(1)";
 	});
-}
+};
 
 // Slider
 
@@ -364,7 +364,32 @@ function sliderSetUp(slider){
 
 
 
+// ABOUT FUNCTIONS
 
+const faqButtons = document.querySelectorAll(".cardFaq");
+
+//  Dropdown description in cards/faqs
+
+faqButtons.forEach(button => {
+	button.addEventListener("click", () => {
+		const display = button.querySelector(".answerFaq").style.display;
+		closeAllButtonsFaq();
+		if (display === "block") {
+			button.querySelector(".answerFaq").style.display = "none";
+			button.querySelector(".flippable").style.transform = "scaleY(1)";
+		} else {
+			button.querySelector(".answerFaq").style.display = "block";
+			button.querySelector(".flippable").style.transform = "scaleY(-1)";
+		}
+	});
+});
+
+function closeAllButtonsFaq() {
+	faqButtons.forEach(button => {
+		button.querySelector(".answerFaq").style.display = "none";
+		button.querySelector(".flippable").style.transform = "scaleY(1)";
+	});
+};
 
 
 
