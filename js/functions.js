@@ -336,22 +336,29 @@ function createNewsCard(data) {
 	return card;
 }
 
-// infinite slide function --> news slider
-setInterval(() => {
-	const cardWidth = newsSliderTop.firstElementChild.offsetWidth;
-	const cardMargin = cardWidth * 0.14;
-	newsSliderTop.style.transition = "all 5s linear";
-	newsSliderTop.style.transform = `translateX(-${ cardWidth + cardMargin }px)`;
-});
+// invoke the sliderSetUp function, to apply it to both sliders
+sliderSetUp(newsSliderTop);
+sliderSetUp(newsSliderBottom);
 
-newsSliderTop.addEventListener('transitionend', function () {
-	newsSliderTop.appendChild(newsSliderTop.firstElementChild);
-	newsSliderTop.style.transition = "none";
-	newsSliderTop.style.transform = "translateX(0)";
-	setTimeout(() => {
-		newsSliderTop.style.transition = "all 5s linear";
+
+// infinite slide function --> news slider
+function sliderSetUp(slider){
+	setInterval(() => {
+		const cardWidth = slider.firstElementChild.offsetWidth;
+		const cardMargin = cardWidth * 0.14;
+		slider.style.transition = "all 5s linear";
+		slider.style.transform = `translateX(-${ cardWidth + cardMargin }px)`;
 	});
-});
+	
+	slider.addEventListener('transitionend', function () {
+		slider.appendChild(slider.firstElementChild);
+		slider.style.transition = "none";
+		slider.style.transform = "translateX(0)";
+		setTimeout(() => {
+			slider.style.transition = "all 5s linear";
+		});
+	});
+}
 
 // mejorar https://es.stackoverflow.com/questions/362808/a%C3%B1adir-efecto-transition-en-javascript-para-slider-automatico
 
