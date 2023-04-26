@@ -83,7 +83,7 @@ html, body {
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 600;
 }
 
@@ -814,6 +814,10 @@ section p {
 
 /* Section #4 -> ABOUT */
 
+#about {
+    height: 150vh;
+}
+
 .about {
     display: flex;
     flex-direction: column;
@@ -821,13 +825,14 @@ section p {
 
 .aboutUs {
     width: 100%;
-    height: 52%;
+    height: 39%;
     background-image: var(--gradient-div);
     border-radius: 1em 1em 0 0;
     padding: 3% 5% 0 5%;
-    overflow: hidden;
     position: relative;
-    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .aboutUs h2 {
@@ -848,7 +853,10 @@ section p {
 .contentAbout h4 {
     color: var(--color-secondary);
     text-transform: uppercase;
-    margin-top: 7%;
+    margin-top: 10%;
+    padding-bottom: 2%;
+    position: relative;
+    bottom: -1%;
     background-color: var(--bg-white);
     border-radius: 1em 1em 0 0;
 }
@@ -856,13 +864,24 @@ section p {
 /* FAQS microsection, inside ABOUT */
 
 .faqCard {
-    border: 1px solid var(--main-color);
-    border-top: none;
-    border-radius: 0 0 1em 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5%;
+    padding: 1.2em;
+    margin-top: -0.9em;
+    border: 1px solid var(--main-color);
+    border-top: none;
+    border-radius: 0 0 1em 1em;
+}
+
+.faqCard h4 {
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.faqCard p {
+    color: var(--color-black);
+    padding-top: 2%;
 }
 
 .faqCard .flippable {
