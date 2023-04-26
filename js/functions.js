@@ -60,10 +60,7 @@
 //     }
 // }
 
-
-// const isMobile = navigator.userAgentData.mobile; //resolves true/false. PROBLEM
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); // SOLUTION
-
+const isMobileOrTablet = (window.innerWidth >= 320 && window.innerWidth <= 768) && (window.innerHeight >= 640 && window.innerHeight <= 1024);
 
 const headerDesktop = document.querySelector(".menuDesktop");
 const headerMobile = document.querySelector(".menuMobile");
@@ -180,8 +177,8 @@ setInterval(function() {
 
 function headerScrollEffect(){
     // Define the scroll limit in order to reduce the header size and apply the 'reduced' class
-	const blurHeaderBond = isMobile ? 30 : 100; 
-	const platformClassList = isMobile ? headerMobile.classList : headerDesktop.classList;
+	const blurHeaderBond = isMobileOrTablet ? 30 : 100;
+	const platformClassList = isMobileOrTablet ? headerMobile.classList : headerDesktop.classList;
 	window.addEventListener("scroll", () => {
 		let scroll = getCurrentScroll();
 			if(scroll >= blurHeaderBond){
@@ -320,7 +317,6 @@ function createNewsCard(data) {
 	const timeLogo = document.createElement("img");
 	timeLogo.src = "img/news/hot-icon.svg";
 	timeLogo.alt = "hot news icon";
-	timeLogo.classList.add("iconNews");
 
 	const timeText = document.createElement("p");
 	timeText.innerHTML = data.newsTime;
@@ -395,8 +391,11 @@ const submitEmail = document.querySelector(".submit-email");
 
 submitEmail.addEventListener("mousedown", (e) => {
 	e.preventDefault();
-	document.querySelector(".subscription").classList.add("done");
-	document.querySelector("input.add-email").style.display = "none";
+	const emailAddress = document.getElementById("emailSubscribe").value;
+	if (emailAddress) { 
+		document.querySelector(".subscription").classList.add("done");
+		document.querySelector("input.add-email").style.display = "none";
+	}
   });
 
 
