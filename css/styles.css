@@ -555,13 +555,12 @@ section p {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    min-width: -webkit-fill-available;
+    width: 90%;
 }
 
 .cardFeature {
     display: flex;
     flex-direction: column;
-    width: 90%;
     flex-wrap: wrap;
     background-color: var(--bg-white);
     box-shadow: var(--neumorphic);
