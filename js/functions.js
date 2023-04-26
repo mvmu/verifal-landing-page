@@ -388,5 +388,16 @@ function closeAllButtonsFaq() {
 	});
 };
 
+// Form dynamism
+// Note: without sending any data, its a mock
+
+const submitEmail = document.querySelector(".submit-email");
+
+submitEmail.addEventListener("mousedown", (e) => {
+	e.preventDefault();
+	document.querySelector(".subscription").classList.add("done");
+	document.querySelector("input.add-email").style.display = "none";
+  });
+
 
 
