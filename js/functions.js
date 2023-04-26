@@ -360,13 +360,10 @@ function sliderSetUp(slider){
 	});
 }
 
-// mejorar https://es.stackoverflow.com/questions/362808/a%C3%B1adir-efecto-transition-en-javascript-para-slider-automatico
-
-
 
 // ABOUT FUNCTIONS
 
-const faqButtons = document.querySelectorAll(".cardFaq");
+const faqButtons = document.querySelectorAll(".faqCard");
 
 //  Dropdown description in cards/faqs
 
@@ -376,10 +373,10 @@ faqButtons.forEach(button => {
 		closeAllButtonsFaq();
 		if (display === "block") {
 			button.querySelector(".answerFaq").style.display = "none";
-			button.querySelector(".flippable").style.transform = "scaleY(1)";
+			button.querySelector(".faqCard .flippable").style.transform = "scaleY(1)";
 		} else {
 			button.querySelector(".answerFaq").style.display = "block";
-			button.querySelector(".flippable").style.transform = "scaleY(-1)";
+			button.querySelector(".faqCard .flippable").style.transform = "scaleY(-1)";
 		}
 	});
 });
@@ -387,7 +384,7 @@ faqButtons.forEach(button => {
 function closeAllButtonsFaq() {
 	faqButtons.forEach(button => {
 		button.querySelector(".answerFaq").style.display = "none";
-		button.querySelector(".flippable").style.transform = "scaleY(1)";
+		button.querySelector(".faqCard .flippable").style.transform = "scaleY(1)";
 	});
 };
 
