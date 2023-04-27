@@ -1,70 +1,83 @@
-// const content = {
-
-//     brandContent: {
-//         download: {
-//             navText: "Descargar",
-//             url: "http://example.com"
-//         },
-//         titleText: "Verifal",
-//     },
-//     sections: {
-//         home: {
-//             navText: "Home",
-//             sectionKey: "home",
-//             sectionH1: "Forma parte de la revolución de la información",
-//             sectionH2: "YA DISPONIBLE",
-//         },
-//         proposal: {
-//             navText: "Proposal",
-//             sectionKey: "proposal",
-//             insideSections: {
-//                 sectionH1: "¿Qué puedes hacer?",
-//                 sectionH2: {
-//                     {
-//                         title="Verifica",
-//                         body= "La mejor arma contra las fake news"
-//                     },
-//                     {
-//                         title= "Comenta",
-//                         body: "Obtén más opiniones sobre la temática"             
-//                     },
-//                     {
-//                         title: "Guarda",
-//                         body: "No te pierdas nada, crea colecciones y lee más tarde"             
-//                     },
-//                     {
-//                         title: "Guarda",
-//                         body: "No te pierdas nada, crea colecciones y lee más tarde"             
-//                     },
-//                     {
-//                         title: "Envía",
-//                         body: "Comparte y envía a través de RRSS para ayudar al fenómeno"             
-//                     },
-//                     {
-//                         title: "Like",
-//                         body: "¿Te gusta? ¡Dale like y ayuda a su difusión!"             
-//                     },
-//                     {
-//                         title: "Reporta",
-//                         body= "Si el contenido es abusivo o falso, no lo dudes"             
-//                     } 
-//                 }           
-//             },
-//     }
-//         press: {
-
-//         },
-//         about: {
-
-//         },
-//     }
-// }
-
-const isMobileOrTablet = (window.innerWidth >= 320 && window.innerWidth <= 768) && (window.innerHeight >= 640 && window.innerHeight <= 1024);
+// decide if the current window is mobile or desktop
+const isMobileOrTablet = window.innerWidth >= 320 && window.innerWidth <= 768;
 
 const headerDesktop = document.querySelector(".menuDesktop");
 const headerMobile = document.querySelector(".menuMobile");
 const proposalButtons = document.querySelectorAll(".cardFeature");
+
+//NAV MENU FUNCTIONS
+
+const botonNav = document.querySelector(".open");
+const links = document.querySelectorAll(".navLink");
+const hamburgerMenu = document.querySelector(".hamburger");
+
+// Hamburger menu dropdown
+// Initialize menu with display none 
+hamburgerMenu.style.display = "none";
+
+botonNav.addEventListener("click", function() {
+		if (hamburgerMenu.style.display === "none") {
+			hamburgerMenu.style.display = "block";
+			hamburgerMenu.style.transition = "all 0.3s ease";
+		}else{
+			hamburgerMenu.style.display = "none";
+			hamburgerMenu.style.transition = "all 0.3s ease";
+		}
+	})
+
+// Add a specific class to the active/non active links
+links.forEach(link => {
+	link.addEventListener("click", function() {
+		// remove active class in every element/link
+		links.forEach(l => {
+			l.classList.remove("activelinksNav");
+		});
+		// add active class to selected element/link
+		link.classList.toggle("activelinksNav");
+		// set a timeOut to hide the hamb menu
+		setTimeout(() => {
+			hamburgerMenu.style.display = "none";
+		}, 600);
+	});
+});
+
+
+// SCROLL FUNCTIONS
+
+// Apply reduced header (blur version)
+
+function headerScrollEffect(){
+    // Define the scroll limit in order to reduce the header size and apply the 'reduced' class
+	const platformClassList = isMobileOrTablet ? headerMobile.classList : headerDesktop.classList;
+	window.addEventListener("scroll", () => {
+		let scroll = getCurrentScroll();
+			if(scroll >= window.innerHeight * 0.07){
+				platformClassList.add("reduced");
+                console.log("haciendo scroll");
+			}else{
+				platformClassList.remove("reduced");
+                console.log("no scroll");
+			} 
+		});
+	function getCurrentScroll(){
+		return window.pageYOffset || document.documentElement.scrollTop;
+	}
+};
+
+headerScrollEffect();
+
+
+// Scroll progress + bar when user scrolls down or up
+
+window.onscroll = function() {scrollEffect()};
+
+function scrollEffect() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
 
 // PROPOSAL FUNCTIONS
 
@@ -171,41 +184,6 @@ setInterval(function() {
 
 
 
-// SCROLL FUNCTIONS
-
-// Reduced header
-
-function headerScrollEffect(){
-    // Define the scroll limit in order to reduce the header size and apply the 'reduced' class
-	const blurHeaderBond = isMobileOrTablet ? 30 : 100;
-	const platformClassList = isMobileOrTablet ? headerMobile.classList : headerDesktop.classList;
-	window.addEventListener("scroll", () => {
-		let scroll = getCurrentScroll();
-			if(scroll >= blurHeaderBond){
-				platformClassList.add("reduced");
-                console.log("haciendo scroll");
-			}else{
-				platformClassList.remove("reduced");
-                console.log("no scroll");
-			} 
-		});
-	function getCurrentScroll(){
-		return window.pageYOffset || document.documentElement.scrollTop;
-	}
-};
-
-headerScrollEffect();
-
-// Scroll progress + bar when user scrolls down or up
-
-window.onscroll = function() {scrollEffect()};
-
-function scrollEffect() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
 
 
 // NEWS

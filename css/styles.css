@@ -141,15 +141,16 @@ header .brand img {
 
 /* class ready to inject with JS (classlist add scroll) */
 header.reduced {
-    height: 50px;
     background: rgba(0,0,0,.007);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 
+
+
 /* NAV BAR */
 
-header ul {
+.menuDesktop ul {
     display: flex;
     list-style: none;
     gap: 10px;
@@ -160,13 +161,13 @@ header ul {
     width: 70%;
 }
 
-ul li{
+.menuDesktop ul li{
     width: 150px;
     text-align: center;
     padding-bottom: 20px;
 }
 
-ul li a{
+.menuDesktop ul li .navLink{
     text-decoration: none;
     color: black;
     font-size: 1em;
@@ -174,7 +175,7 @@ ul li a{
     letter-spacing: 0.08em;
 }
 
-a:hover {
+.menuDesktop ul li .navLink:hover {
     /* font-size: 1.1em; */
     background: var(--gradient);
     background-clip: text;
@@ -192,8 +193,9 @@ a:hover {
     font-size: 1em;
     font-weight: 500;
     border-radius: 7px;
-    color: white;
-    background: radial-gradient(farthest-corner at -59px -48px,#E7181C 66.4%, #F07577 96.78%);
+    color: var(--bg-white);
+    background-image: var(--gradient); 
+    /* radial-gradient(farthest-corner at -59px -48px,#E7181C 66.4%, #F07577 96.78%); */
     cursor: pointer;
     border: none;
 }
@@ -229,18 +231,6 @@ a:hover {
 
 /* HAMBURGER NAV FOR MOBILE DEVICES */
 
-.hamburger {
-    display: block;
-    width: 70px;
-    height: 70px;
-    color: var(--main-color);
-    position: fixed;
-    left: 0;
-    top: 50px;
-    z-index: 0;
-    /* MOBILE ANTES DE COGER LA IDEA. CAMBIAR Y MEZCLAR */
-}  
-
 header.menuMobile {
 	display: flex;
     justify-content: space-between;
@@ -249,10 +239,35 @@ header.menuMobile {
     left: 0;
 	z-index: 10;
     width: 100vw;
-	height: 7%;
-    max-height: 50px;
-    padding: 10px;
+	/* height: 7%; */
+    max-height: 3.1em;
+    padding: 0.6em;
 }
+
+/* .hamburger {
+    display: block;
+    width: 70px;
+    height: 70px;
+    color: var(--main-color);
+    position: fixed;
+    left: 0;
+    top: 50px;
+    z-index: 0;
+} */
+
+.hamburger {
+    width: 100vw;
+    height: fit-content;
+    padding-top: 3em;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: var(--main-color);
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow2);
+    border-radius: 0 0 1em 1em;
+    z-index: -1;
+}  
 
 header.menuMobile .brandName p {
     font-size: 1.3em;
@@ -261,7 +276,15 @@ header.menuMobile .brandName p {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} 
+
+/* .open {
+	display: block;
+    /* background-color: transparent;
+	width: 35px; */
+	/* padding: 0.3em 0;
+    cursor: pointer;
+} */ 
 
 .open {
 	display: flex;
@@ -273,17 +296,31 @@ header.menuMobile .brandName p {
     cursor: pointer;
 }
 
-.open span {
+.open span.bar {
 	display: block;
-	height: 4px;
-	width: 80%;
+	height: 0.18em;
+	width: 1.5em;
 	text-align: center;
-    border-radius: 10px;
+    border-radius: 1em;
 	background-color: var(--main-color);
 	margin: 2px auto;
 }
 
-.hamburger {
+.open .bar.close:nth-child(1){
+    transform: rotate(-45deg) translateY(5px) translateX(-5.8px);
+    background-color: var(--main-color);
+}
+
+.open .bar.close:nth-child(2){
+    transform: rotate(45deg);
+    background-color: var(--main-color);
+}
+
+.open .bar.close:nth-child(3){
+    opacity: 0;
+}
+
+/* .hamburger {
 	width: 100%;
 	height: 100vh;
 	position: absolute;
@@ -291,24 +328,43 @@ header.menuMobile .brandName p {
 	flex-direction: column;
 	opacity: 0.8;
 	display: none;
-}
+} */
 
-.hamburger ul {
+.hamburger .navMenu {
 	display: block;
-	text-align: center;
+    width: 100%;
 }
 
-.hamburger li:not(:first-child) {
-	margin-top: 40px;
+.hamburger .navMenu li {
+    width: 100%;
+    padding: 0.7em 1em;
+    border-bottom: 1px solid var(--color-secondary-lighgray);
+    border-radius: 1em;
+    list-style: none;
 }
 
-.hamburger a {
-	color: rgba(255, 255, 255, 0.7);
-	font-size: 3em;
-	padding: 20px 40px;
-	transition: all .3s;
+.hamburger .navMenu li:last-child {
+    border-bottom: none;
 }
 
+.hamburger .navLink:not(:first-child) {
+	margin-top: 2.5em;
+}
+
+.hamburger .navLink {
+    width: 100%;
+	color: var(--color-secondary);
+	font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+	transition: all .5s ease;
+}
+
+.hamburger .navMenu .navLink.activelinksNav {
+	color: var(--main-color);
+}
+
+/* 
 .close {
 	display: block;
 	appearance: none;
@@ -327,7 +383,7 @@ header.menuMobile .brandName p {
 
 .close:hover {
 	color: white;
-}
+} */
 
 /* REVISAR ESTA REGLA
 .desplegado {
@@ -381,14 +437,17 @@ header.menuMobile .brandName p {
 /* CONTENT SECTION #1*/
 section {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
+    margin-bottom: 3em;
 }
 /* First, the general values for all the sections in the document */
 
 .home {
     display: grid;
+    width: 100vw;
+    height: 100vh;
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: 20% 65% 15%;
 }
@@ -548,7 +607,7 @@ section p {
 } 
 
 .cardsContainerColumn1 img {
-    width: 120%;
+    width: 38vw;    
     position: relative;
     bottom: -5%;
 }
@@ -602,6 +661,7 @@ section p {
 .sliderContainer {
     display: flex;
     height: 50%;
+    margin-top: 20%;
     flex-direction: column;
     position: relative;
     align-items: center;
@@ -640,6 +700,7 @@ section p {
 
 #proposal {
     height: 130vh; /* override */
+    margin-bottom: 6em;
 }
 
 .slide {
@@ -733,15 +794,14 @@ section p {
 
 .rightNow {
     width: 90%;
-    height: 75%;
-    margin-top: 25%;
+    height: 30em;
     background-color: var(--bg-white-bigCard);
     border-radius: 1em;
     background-blend-mode: luminosity;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     border: 1px solid var(--main-color);
-    padding: 3%;
+    padding-top: 3%;
     overflow: hidden;
 }
 
@@ -821,10 +881,6 @@ section p {
 }
 
 /* Section #4 -> ABOUT */
-
-#about {
-    height: 150vh;
-}
 
 .about {
     display: flex;
@@ -1043,8 +1099,8 @@ footer .brand h2 {
     position: static;
 }
 
-.social-networks button img {
-    width: 1.5em;     /* TO DO, CHECK THIS IN MQ */
+footer .social-networks button img {
+    width: 4vw;     /* TO DO, CHECK THIS IN MQ */
 }
 
 /* :hover on desktop */
