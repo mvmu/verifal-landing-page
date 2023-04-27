@@ -736,7 +736,6 @@ section p {
     height: 75%;
     margin-top: 25%;
     background-color: var(--bg-white-bigCard);
-    /* box-shadow: var(--shadow2); */
     border-radius: 1em;
     background-blend-mode: luminosity;
     -webkit-backdrop-filter: blur(2px);
@@ -932,6 +931,7 @@ section p {
 .formContent {
     width: 90%;
     height: 2em;
+    margin-top: 2em;
     box-shadow: var(--neumorphic);
     border-radius: 3em;
     overflow: hidden;
@@ -1031,6 +1031,10 @@ footer .brand {
 footer .brand h2 {
     font-size: 2em;
     margin-right: 12%;
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .brand .social-networks {
@@ -1040,7 +1044,32 @@ footer .brand h2 {
 }
 
 .social-networks button img {
-    width: 2em;     /* TO DO, CHECK THIS IN MQ */
+    width: 1.5em;     /* TO DO, CHECK THIS IN MQ */
+}
+
+/* :hover on desktop */
+.social-networks button img:active {
+    width: 1.6em;     /* TO DO, CHECK THIS IN MQ */
+    transition: all 0.3s ease;
+}
+
+.footercontent {
+    font-size: 0.8em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.footerText {
+    padding: 1em;
+}
+
+.footerTextLegal {
+    font-weight: 300;
+}
+
+/* add this selector with :hover pseudoselector only on desktop devices breakpoints */
+.footerTextLegal p:active {
+    color: var(--color-secondary);
 }
 
 /* SCROLL PROGRESS */
