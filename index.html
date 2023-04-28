@@ -85,7 +85,9 @@
             <div class="home">
                 <!-- This button will be displayed only on Desktop devices -->
                 <button class="button-scroll">
-                    <img src="img/arrowScroll.svg" alt="button to scroll">
+                    <a href="#home">
+                        <img src="img/arrowScroll.svg" alt="button to scroll up">
+                    </a>
                 </button>
                 <!-- Social Networks buttons -->
                 <div class="social-networks">
@@ -112,14 +114,17 @@
                     <button class="download" id="CTAhome">Download</button>
                 </div>
                 <div class="markets">
-                    <p>AVAILABLE <br>
-                        NOW</p>
+                    <p class="available">AVAILABLE NOW</p>
                     <div class="markets-img">
                         <img src="img/Buttons/appstorelight.svg" alt="App Store">
                         <img src="img/Buttons/googleplaylight.svg" alt="Google Play">
                     </div>
                 </div>  
-            </div>    
+            </div> 
+            <div class="arrowDiv">
+                <span class="arrowIcon"></span>
+                <span class="arrowIcon"></span>
+            </div>   
         </section>
         <!-- Section PROPOSAL, dedicated to describe main features -->
         <section id="proposal">
@@ -186,31 +191,41 @@
                         <img src="img/mockup03.svg" class="imgSliderContainer" alt="collection features">
                         <h2>Discover... <br> and save!</h2>
                     </div>
-                    <div class="breadcrumbs">
-                        <div class="breadcrumb"></div>
-                        <div class="breadcrumb"></div>
-                        <div class="breadcrumb"></div>
-                    </div>
-                    <div class="sliderProposal">
-                        <div class="slide">
-                            <h4>Live in the moment</h4>
-                            <p>Depending on your location, find out what is most viewed, commented or verified. You will be up to date without effort and having all the tools in your hand</p>                
+                    <div class="sliderAndButtons">
+                        <div class="buttonSlider">
+                            <button id="prev">
+                                <img src="img/Buttons/VectorArrow.svg" alt="prev arrow"> 
+                            </button>
+                            <div class="breadcrumbsDiv">
+                                <div class="breadcrumb"></div>
+                                <div class="breadcrumb"></div>
+                                <div class="breadcrumb"></div>
+                            </div>
+                            <button id="next">
+                                <img src="img/Buttons/VectorArrow.svg" alt="next arrow">
+                            </button>
                         </div>
-                        <div class="slide">
-                            <h4>Don't miss a thing</h4>
-                            <p>Have you seen a story you like but don't have time to read? The rush is not good, the best option is to store it. Who knows, it may be a good file for new research</p>                
-                        </div>
-                        <div class="slide">
-                            <h4>Locate the news in your timeline</h4>
-                            <p>With small keyboards and the main image you will know what it is at a glance, knowing when they happened</p>                
-                        </div>
-                        <button id="prev">
-                            <img src="img/Buttons/VectorArrow.svg" alt="prev arrow"> 
-                        </button>
-                        <button id="next">
-                            <img src="img/Buttons/VectorArrow.svg" alt="next arrow">
-                        </button>
-                     </div>
+                        <div class="sliderProposal">
+                            <div class="slide">
+                                <h4>Live in the moment</h4>
+                                <p>Depending on your location, find out what is most viewed, commented or verified. You will be up to date without effort and having all the tools in your hand</p>                
+                            </div>
+                            <div class="slide">
+                                <h4>Don't miss a thing</h4>
+                                <p>Have you seen a story you like but don't have time to read? The rush is not good, the best option is to store it. Who knows, it may be a good file for new research</p>                
+                            </div>
+                            <div class="slide">
+                                <h4>Locate the news in your timeline</h4>
+                                <p>With small keyboards and the main image you will know what it is at a glance, knowing when they happened</p>                
+                            </div>
+                            <!-- <button id="prev">
+                                <img src="img/Buttons/VectorArrow.svg" alt="prev arrow"> 
+                            </button>
+                            <button id="next">
+                                <img src="img/Buttons/VectorArrow.svg" alt="next arrow">
+                            </button> -->
+                         </div>
+                    </div>     
                 </div>
             </div>
             <img class="background1" src="img/Background-Looper.svg">
@@ -223,74 +238,10 @@
                 </div>
                 <div class="sliderRightNow">
                     <div class="sliderWrap">
-                        <!-- <div class="sliderCardRightNow">
-                            <img src="img/news/news1.jpeg" class="news" alt="Sant Jordi's Day in Barcelona">
-                            <h5>Sant Jordi's Day</h5>
-                            <div class="sliderCardTime">
-                                <img src="img/news/hot-icon.svg" class="iconNews" alt="hot news icon">
-                                <p>17h</p>
-                            </div>
-                        </div>
-                        <div class="sliderCardRightNow">
-                            <img src="img/news/news1.jpeg" class="news" alt="Sant Jordi's Day in Barcelona">
-                            <h5>Sant Jordi's Day</h5>
-                            <div class="sliderCardTime">
-                                <img src="img/news/hot-icon.svg" class="iconNews" alt="hot news icon">
-                                <p>17h</p>
-                            </div>
-                        </div>
-                        <div class="sliderCardRightNow">
-                            <img src="img/news/news1.jpeg" class="news" alt="Sant Jordi's Day in Barcelona">
-                            <h5>Sant Jordi's Day</h5>
-                            <div class="sliderCardTime">
-                                <img src="img/news/hot-icon.svg" class="iconNews" alt="hot news icon">
-                                <p>17h</p>
-                            </div>
-                        </div>
-                        <div class="sliderCardRightNow">
-                            <img src="img/news/news1.jpeg" class="news" alt="Sant Jordi's Day in Barcelona">
-                            <h5>Sant Jordi's Day</h5>
-                            <div class="sliderCardTime">
-                                <img src="img/news/hot-icon.svg" class="iconNews" alt="hot news icon">
-                                <p>17h</p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="sliderRightNow">
                     <div class="sliderWrap">
-                        <!-- <div class="sliderCardRightNow">
-                            <img src="img/news/news1.jpeg" class="news" alt="Sant Jordi's Day in Barcelona">
-                            <h5>Sant Jordi's Day</h5>
-                            <div class="sliderCardTime">
-                                <img src="img/news/hot-icon.svg" class="iconNews" alt="hot news icon">
-                                <p>17h</p>
-                            </div>
-                        </div>
-                        <div class="sliderCardRightNow">
-                            <img src="img/news/news1.jpeg" class="news" alt="Sant Jordi's Day in Barcelona">
-                            <h5>Sant Jordi's Day</h5>
-                            <div class="sliderCardTime">
-                                <img src="img/news/hot-icon.svg" class="iconNews" alt="hot news icon">
-                                <p>17h</p>
-                            </div>
-                        </div>
-                        <div class="sliderCardRightNow">
-                            <img src="img/news/news1.jpeg" class="news" alt="Sant Jordi's Day in Barcelona">
-                            <h5>Sant Jordi's Day</h5>
-                            <div class="sliderCardTime">
-                                <img src="img/news/hot-icon.svg" class="iconNews" alt="hot news icon">
-                                <p>17h</p>
-                            </div>
-                        </div>
-                        <div class="sliderCardRightNow">
-                            <img src="img/news/news1.jpeg" class="news" alt="Sant Jordi's Day in Barcelona">
-                            <h5>Sant Jordi's Day</h5>
-                            <div class="sliderCardTime">
-                                <img src="img/news/hot-icon.svg" class="iconNews" alt="hot news icon">
-                                <p>17h</p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -304,7 +255,10 @@
                     </div>
                     <div class="contentAbout">
                         <p>Information is not only a human need as a social animal, it is also a right. This is the origin of Verifal, whose creator, a vocational journalist, has developed to fight disinformation. Fight the fake news and give voice to all!</p>
-                        <h4>Want to know how it works? <br> Let's see it</h4>
+                        <div class="faqsIntroduction">
+                            <h3>FAQS</h3>
+                            <h4>Want to know how it works? <br> Let's see it</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="faqs">
@@ -369,7 +323,7 @@
                     </div>
                 </div>
                 <div class="footerText">
-                    <p>Created by Marta Villanueva</p>
+                    <p>Made with &#128420; by Marta Villanueva</p>
                 </div>
                 <div class="footerTextLegal">
                     <p>Terms of service</p>

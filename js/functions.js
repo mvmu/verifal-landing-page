@@ -1,5 +1,5 @@
 // decide if the current window is mobile or desktop
-const isMobileOrTablet = window.innerWidth >= 320 && window.innerWidth <= 768;
+const isMobileOrTablet = window.innerWidth >= 320 && window.innerWidth <= 960;
 
 const headerDesktop = document.querySelector(".menuDesktop");
 const headerMobile = document.querySelector(".menuMobile");
@@ -320,7 +320,7 @@ function sliderSetUp(slider){
 	setInterval(() => {
 		const cardWidth = slider.firstElementChild.offsetWidth;
 		const cardMargin = cardWidth * 0.14;
-		slider.style.transition = "all 5s linear";
+		slider.style.transition = "all 10s linear";
 		slider.style.transform = `translateX(-${ cardWidth + cardMargin }px)`;
 	});
 	
@@ -329,7 +329,7 @@ function sliderSetUp(slider){
 		slider.style.transition = "none";
 		slider.style.transform = "translateX(0)";
 		setTimeout(() => {
-			slider.style.transition = "all 5s linear";
+			slider.style.transition = "all 10s linear";
 		});
 	});
 }
