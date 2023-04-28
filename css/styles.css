@@ -1189,7 +1189,178 @@ footer .social-networks button img {
 /*// 1201 - 1600 -> XL*/
 /*// >= 1601 -> 4K*/
 
-/* A MQ for the menu, the rest of setting will be written in its respective MQ*/
+/* iPad/Tablet & small laptops */
+@media screen and (min-width: 481px) and (max-width: 960px) {
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    h4 {
+        width: 90%;
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.3em;
+    }
+
+    header.menuMobile {
+        padding: 2.2em;
+    }
+
+    header.menuMobile .brandName p {
+        font-size: 1.6em;
+    }
+
+    /* .home {
+        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-rows: 13% 65% auto;
+    } */
+
+    #CTAhome {
+        font-size: 4vw;
+        top: 5vw;
+        width: 80%;
+    }
+
+    .markets img {
+        max-width: 13em;
+    }
+
+    .home-text h1 {
+        line-height: 7vw;
+    }
+
+    .home-img img {
+        margin-bottom: -15%;
+        height: 50em;
+    }
+
+    .social-networks button img {
+        max-width: 45px;
+    }
+
+    .featureTitle img {
+        width: 2em;
+    }
+
+    .sliderContainer {
+        height: 54em;
+    }
+
+    .sliderProposal {
+        height: 22em;
+        top: -8.3em;
+    }
+
+    .buttonSlider {
+        top: -8em;
+        padding: 5%;
+    }
+
+    .breadcrumb {
+        width: 0.8em;
+        height: 0.8em;
+    }
+
+    .breadcrumb.active {
+        width: 2em;
+    }
+
+    .titleSliderContainer img {
+        width: 26em;
+        top: -20%;
+    }
+
+    .sliderCardRightNow h5 {
+        font-size: 1.3em;
+        padding: 1em;
+    }
+
+    .faqCard .flippable, .cardFeature .flippable {
+        width: 1.2em;
+    }
+
+    .sliderCardTime p {
+        font-size: 1.15em;
+    }
+
+    .sliderCardTime img {
+        width: 2em;
+    }
+
+    .home-text p, .subscription .add-email, .formContainer p, .slide p, p.featureDescription, .answerFaq, .contentAbout p {
+        font-size: 1.3em;
+    }
+
+    .rightNow {
+        height: 60em;
+    }
+
+    .aboutUs {
+        border-radius: 4em 4em 0 0;
+        margin-top: 15%;
+    }
+
+    .formContent {
+        height: 4em;
+    }
+
+    .subscription .submit-email .before-submit {
+        line-height: 2.3em;
+        font-size: 2em;
+    }
+
+    footer .brand h2 {
+        font-size: 4em;
+    }
+
+    .footerText {
+        padding: 2em;
+    }
+
+    footer p {
+        font-size: 1.3em;
+        opacity: 0.7;
+    }
+}
+
+/* Tablets only */
+@media screen and (min-width: 768px) and (max-width: 960px) {
+    .open span.bar {
+        height: 0.4em;
+        width: 2.5em;
+    }
+
+    .hamburger .navMenu {
+        padding-top: 1em;
+    }
+
+    .hamburger .navMenu li {
+        width: 100%;
+        padding: 2.2em 3em;
+    }
+
+    .hamburger .navLink {
+        font-size: 1.2em;
+    }
+
+    .home-img img {
+        height: 97%;
+    }
+
+    #proposal .background1 {
+        object-position: -76vw -29vw;
+        width: 250vw;
+    }
+
+}
+
+/* Laptop only */
 @media screen and (min-width: 961px) {
 
     h2 {
@@ -1460,178 +1631,51 @@ footer .social-networks button img {
     
 }
 
-
-
-/* iPad/Tablet & small laptops */
-@media screen and (min-width: 481px) and (max-width: 960px) {
-    h2 {
-        font-size: 2.5em;
+@media screen and (min-width: 1200px) {
+    .social-networks {
+        height: 90%;
     }
 
-    h3 {
-        font-size: 1.8em;
-    }
-
-    h4 {
-        width: 90%;
-        font-size: 1.5em;
-    }
-
-    h5 {
-        font-size: 1.3em;
-    }
-
-    header.menuMobile {
-        padding: 2.2em;
-    }
-
-    header.menuMobile .brandName p {
-        font-size: 1.6em;
-    }
-
-    /* .home {
-        grid-template-columns: 10% 40% 40% 10%;
-        grid-template-rows: 13% 65% auto;
-    } */
-
-    #CTAhome {
-        font-size: 4vw;
-        top: 5vw;
-        width: 80%;
-    }
-
-    .markets img {
-        max-width: 13em;
+    .home-text {
+        padding-top: 10%;
     }
 
     .home-text h1 {
-        line-height: 7vw;
+        line-height: 7vh;
     }
 
     .home-img img {
-        margin-bottom: -15%;
-        height: 50em;
+        height: 87%;
+        left: 9%;
     }
 
-    .social-networks button img {
-        max-width: 45px;
+    .markets {
+        width: 150%;
     }
 
-    .featureTitle img {
-        width: 2em;
+    .markets p.available {
+        font-size: 2.4vw;
     }
 
-    .sliderContainer {
-        height: 54em;
+    .markets-img {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
     }
 
-    .sliderProposal {
-        height: 22em;
-        top: -8.3em;
+    .markets img {
+        max-width: 12em;
     }
 
-    .buttonSlider {
-        top: -8em;
-        padding: 5%;
+    .cardsContainer {
+        grid-template-columns: repeat(6, 1fr);
     }
 
-    .breadcrumb {
-        width: 0.8em;
-        height: 0.8em;
-    }
-
-    .breadcrumb.active {
-        width: 2em;
-    }
-
-    .titleSliderContainer img {
-        width: 26em;
-        top: -20%;
-    }
-
-    .sliderCardRightNow h5 {
-        font-size: 1.3em;
-        padding: 1em;
-    }
-
-    .faqCard .flippable, .cardFeature .flippable {
-        width: 1.2em;
-    }
-
-    .sliderCardTime p {
-        font-size: 1.15em;
-    }
-
-    .sliderCardTime img {
-        width: 2em;
-    }
-
-    .home-text p, .subscription .add-email, .formContainer p, .slide p, p.featureDescription, .answerFaq, .contentAbout p {
-        font-size: 1.3em;
-    }
-
-    .rightNow {
-        height: 60em;
-    }
-
-    .aboutUs {
-        border-radius: 4em 4em 0 0;
-        margin-top: 15%;
-    }
-
-    .formContent {
-        height: 4em;
-    }
-
-    .subscription .submit-email .before-submit {
-        line-height: 2.3em;
-        font-size: 2em;
-    }
-
-    footer .brand h2 {
-        font-size: 4em;
-    }
-
-    .footerText {
-        padding: 2em;
-    }
-
-    footer p {
-        font-size: 1.3em;
-        opacity: 0.7;
+    .cardsContainerColumn1 img {
+        width: 24vw;
     }
 }
 
-/* tablets only */
-@media screen and (min-width: 768px) and (max-width: 960px) {
-    .open span.bar {
-        height: 0.4em;
-        width: 2.5em;
-    }
-
-    .hamburger .navMenu {
-        padding-top: 1em;
-    }
-
-    .hamburger .navMenu li {
-        width: 100%;
-        padding: 2.2em 3em;
-    }
-
-    .hamburger .navLink {
-        font-size: 1.2em;
-    }
-
-    .home-img img {
-        height: 97%;
-    }
-
-    #proposal .background1 {
-        object-position: -76vw -29vw;
-        width: 250vw;
-    }
-
-}
 
 
 /* @media screen and (min-width: 961px) {
