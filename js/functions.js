@@ -9,6 +9,7 @@ const proposalButtons = document.querySelectorAll(".cardFeature");
 
 const botonNav = document.querySelector(".open");
 const links = document.querySelectorAll(".navLink");
+const linksDesktop = document.querySelectorAll(".nav-item");
 const hamburgerMenu = document.querySelector(".hamburger");
 
 // Hamburger menu dropdown
@@ -40,6 +41,20 @@ links.forEach(link => {
 		}, 600);
 	});
 });
+
+// Desktop links
+linksDesktop.forEach(link => {
+	link.addEventListener("click", () => {
+		removeOthersActiveLink(linksDesktop);
+		link.classList.toggle("activelinks");
+	})
+});
+
+function removeOthersActiveLink(links) {
+	links.forEach(link => {
+		link.classList.remove("activelinks");
+	});
+}
 
 
 // SCROLL FUNCTIONS
@@ -110,7 +125,7 @@ function onCardOut(event, description, frontSide) {
 }
 
 function onCardClick(description, arrow) {
-	closeAllButtons();
+	closeOtherButtons(description);
 
 	if (description.style.display === "block") {
 		description.style.display = "none";
@@ -121,10 +136,12 @@ function onCardClick(description, arrow) {
 	}
 }
 
-function closeAllButtons() {
+function closeOtherButtons(description) {
 	proposalButtons.forEach(button => {
-		button.querySelector(".featureDescription").style.display = "none";
-		button.querySelector(".flippable").style.transform = "scaleY(1)";
+		if (description !== button.querySelector(".featureDescription")) {
+			button.querySelector(".featureDescription").style.display = "none";
+			button.querySelector(".flippable").style.transform = "scaleY(1)";
+		}
 	});
 };
 
@@ -207,10 +224,7 @@ setInterval(function() {
 },5000);
 
 
-
-
-
-// NEWS
+// News functions
 const newsTop = [{
 	imageSrc: "img/news/news1.jpeg",
 	imageAlt: "Sant Jordi's Day in Barcelona",
@@ -387,7 +401,7 @@ function closeAllButtonsFaq() {
 };
 
 // Form dynamism
-// Note: without sending any data, its a mock
+// Note: there is no backend, its just a mock
 
 const submitEmail = document.querySelector(".submit-email");
 

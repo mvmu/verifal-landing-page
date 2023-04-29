@@ -1,35 +1,11 @@
+/* GENERAL SETTINGS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* 
-:root {
-    /* button fonts/default/5-warning font style 
-    --button-font-size: 30px;
-    --button-line-height: 14px;
-    --button-text-align: center;
-    --button-color: #f0ad4e;
-    --button-letter-spacing: 0.2px;
-    --button-font-style: normal;
-    --button-font-weight: 400;
-    --button-font-family: "Roboto";
-    
-    --button:  
-        var(--button-font-style)
-        var(--button-font-weight)
-        var(--button-font-size)/
-        var(--button-line-height)
-        var(--button-font-family);
-    }
-    .warning {
-      font:var(--button);
-      color: var(--button-color);
-      letter-spacing: var(--button-letter-spacing);
-      text-align:var(--button-text-align);
-    } */
 
-    /* GENERAL SETTINGS */
+
 :root {
     /* colors */
     --main-color: #E7181C;
@@ -59,7 +35,7 @@ body {
 }
 
 html, body {
-    /* default values for mobile */
+    /* default values mobile first */
     width: 100vw;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -78,7 +54,6 @@ html, body {
 }
 
 .maincontainer {
-    /* display: grid; */
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -118,17 +93,17 @@ strong {
     -webkit-text-fill-color: transparent;
 }
 
-/* NAV BAR DESKTOP*/
+/* HEADER DESKTOP*/
 
 header.menuDesktop {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+    align-items: center;
     padding: 20px;
     width: 100%;
     height: 7em;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 10;
     transition: all 0.5s ease-in;
 }
@@ -147,35 +122,34 @@ header.reduced {
 }
 
 
-
-/* NAV BAR */
+/* Nav bar */
 
 .menuDesktop ul {
     display: flex;
-    list-style: none;
-    gap: 1em;
     align-items: center;
-    margin: 0 20px;
-    height: 50%;
-    margin-left: 5%;
+    gap: 1em;
     width: 70%;
+    height: 2.5em;
+    margin: 0 20px;
+    margin-left: 5%;
+    list-style: none;
 }
 
 .menuDesktop ul li{
     width: 11em;
+    height: 100%;
     text-align: center;
 }
 
 .menuDesktop ul li .navLink{
-    text-decoration: none;
-    color: black;
     font-size: 1.1em;
     font-weight: 500;
     letter-spacing: 0.08em;
+    text-decoration: none;
+    color: var(--color-black);
 }
 
 .menuDesktop ul li .navLink:hover {
-    /* font-size: 1.1em; */
     background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -211,13 +185,11 @@ header.reduced {
     background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
-    transition: all 0.2s ease;
     border: 1px solid var(--main-color);
+    transition: all 0.2s ease;
 }
 
 .activelinks { 
-    /* añadir posteriormente en js la clase cuando este activo, addeventlistener click */
     border-bottom: 3px solid var(--main-color);
     color: var(--main-color);
     transition: border-bottom 0.3s ease-in;
@@ -233,13 +205,12 @@ header.menuMobile {
 	display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
+	height: 7%;
+    padding: 0.6em;
 	position: fixed;
     left: 0;
 	z-index: 10;
-    width: 100vw;
-	height: 7%;
-    /* max-height: 3.1em; */
-    padding: 0.6em;
 }
 
 .hamburger {
@@ -265,6 +236,8 @@ header.menuMobile .brandName p {
     -webkit-text-fill-color: transparent;
 } 
 
+
+/* Hamburger button */
 .open {
 	display: flex;
     flex-direction: column;
@@ -277,12 +250,12 @@ header.menuMobile .brandName p {
 
 .open span.bar {
 	display: block;
-	height: 0.18em;
-	width: 1.5em;
+    width: 1.5em;
+    height: 0.18em;	
+    margin: 2px auto;
 	text-align: center;
     border-radius: 1em;
 	background-color: var(--main-color);
-	margin: 2px auto;
 }
 
 .open .bar.close:nth-child(1){
@@ -322,10 +295,10 @@ header.menuMobile .brandName p {
 
 .hamburger .navLink {
     width: 100%;
-	color: var(--color-secondary);
-	font-size: 1em;
+    font-size: 1em;
     font-weight: 500;
     text-decoration: none;
+	color: var(--color-secondary);
 	transition: all .5s ease;
 }
 
@@ -355,17 +328,14 @@ header.menuMobile .brandName p {
     border-radius: 16px;
     color: var(--main-color);
     background: var(--bg-white);
-    cursor: pointer;
     border: 1px solid var(--main-color);
+    cursor: pointer;
 }
 
 .language:hover {
-    box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8);
-    /* background: linear-gradient(to right, #E7181C 66.4%, #F07577 96.78%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    transition: all 0.2s ease-in;
+    box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8); 
     border: none;
+    transition: all 0.2s ease-in;
 }
 
 /* BUTTON TO SCROLL */
@@ -374,11 +344,11 @@ header.menuMobile .brandName p {
     display: none;
     appearance: none;
     -webkit-appearance: none;
-    background: none;
-    border: none;
     position: fixed;
     right: 20px;
     top: calc(100vh - 320px);
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
@@ -393,8 +363,8 @@ header.menuMobile .brandName p {
 .arrowIcon {
     opacity: 0;
     position: absolute;
-        left: 50%;
-        top: 50%;
+    left: 50%;
+    top: 50%;
     transform-origin: 50% 50%;
     transform: translate3d(-50%, -50%, 0);
 }
@@ -408,14 +378,14 @@ header.menuMobile .brandName p {
 
 .arrowIcon:before,
 .arrowIcon:after {
+    display: block;
+    width: 1.8em;
+    height: 3px; 
     background: var(--main-color);
     content: '';
-    display: block;
-    height: 3px; 
     position: absolute;
-        top: 0;
-        left: 0;
-    width: 1.8em;
+    top: 0;
+    left: 0;
 }
 
 .arrowIcon:before {
@@ -445,10 +415,10 @@ header.menuMobile .brandName p {
 
 /* Default settings for SECTION */
 section {
-    width: 100vw;
-    height: auto;
     display: flex;
     justify-content: center;
+    width: 100vw;
+    height: auto; 
     margin-bottom: 3em;
 }
 
@@ -487,12 +457,10 @@ h1 .gradient-text {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 10vw;
-    
 }
 
 section p {
     width: 100%;
-    /* font-size: 5vw; */
     font-size: 1em;
     color: var(--color-secondary);
     text-align: center;
@@ -525,8 +493,8 @@ section p {
 
 .markets-img {
     display: flex;
-    width: 90%;
     justify-content: space-evenly;
+    width: 90%;
     padding: 7% 5%;
 }
 
@@ -545,22 +513,21 @@ section p {
 #CTAhome {
     box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8);
     position: relative;
-    /* width: 35vw;
-    max-width: 40vw; */
     font-size: 5vw;
     z-index: 2;
 }
 
 .social-networks {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     grid-column: 1;
     grid-row: 2 / 3;
     /* height: initial -> 280px / After -> auto, cause fits better with its grid cell*/
     height: auto;
-    flex-direction: column;
-    justify-content: space-around;
     position: relative;
-    left: 60%;}
+    left: 60%;
+}
 
 .social-networks button {
     appearance: none;
@@ -571,7 +538,7 @@ section p {
 }
 
 .social-networks button img {
-    width: 8vw;     /* TO DO, CHECK THIS IN MQ */
+    width: 8vw;     
     max-width: 36px;
 }
 
@@ -583,6 +550,7 @@ section p {
     width: 95vw;
     height: auto;
     padding: 3%;
+    margin-bottom: 10%;
     background: var(--bg-white-bigCard);
     background-blend-mode: luminosity;
     -webkit-backdrop-filter: blur(6px);
@@ -590,7 +558,6 @@ section p {
     border-radius: 46px 0 0 46px;
     position: relative;
     left: 3%;
-    margin-bottom: 10%;
     box-shadow: var(--shadow2);
 }
 
@@ -610,22 +577,22 @@ section p {
 }
 
 .cardsContainerColumn2 {
-    position: absolute;
-    grid-column: 2;
-    width: 90%;
-    height: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    position: absolute;
+    grid-column: 2;
+    width: 90%;
+    height: 100%; 
 }
 
 .cardFeature {
     display: flex;
     flex-direction: column;
+    padding: 5% 7%;
     /* flex-wrap: wrap; */
     background-color: var(--bg-white);
     box-shadow: var(--neumorphic);
-    padding: 5% 7%;
     border-radius: 16px;
 }
 
@@ -649,33 +616,33 @@ section p {
 }
 
 .featureDescription {
-    font-size: 0.8em;
     display: none;
+    font-size: 0.8em;
 }
 
 /* Proposal Part II --> slider */
 
 .sliderContainer {
     display: flex;
-    height: 25em;
-    margin-top: 20%;
     flex-direction: column;
-    position: relative;
     align-items: center;
     justify-content: space-evenly;
+    height: 25em;
+    margin-top: 20%;
+    position: relative;
 }
 
 .titleSliderContainer {
     display: flex;
-    width: 90%;
     justify-content: space-between;
+    width: 90%;
     gap: 3%;
 }
 
 .titleSliderContainer img {
-    z-index: 3;
     position: relative;
     top: -15%;
+    z-index: 3;
 }
 
 .sliderProposal {
@@ -699,31 +666,31 @@ section p {
 }
 
 .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     height: 90%;
     position: absolute;
     top: 0;
     left: 0;
     transition: transform, 0.5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 .buttonSlider button {
     appearance: none;
     -webkit-appearance: none;
+    height: 0.9vw;
     position: absolute;
     border: none;
     background: none;
-    height: 0.9vw;
 }
 
 .slide p {
+    width: 90%;
     padding-top: 1em;
     font-size: 0.85em;
     color: var(--color-black);
-    width: 90%;
 }
 
 #prev {
@@ -746,13 +713,13 @@ section p {
 
 
 .buttonSlider {
-    position: relative;
-    width: 100%;
-    top: -3em;
-    right: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    position: relative;
+    top: -3em;
+    right: 0;
     z-index: 5;
 }
 
@@ -761,12 +728,12 @@ section p {
 }
 
 .breadcrumb {
-    border-radius: 50%;
     width: 0.4em;
     height: 0.4em;
+    margin-right: 15px;
+    border-radius: 50%;
     background-color: var(--color-black);
     cursor: pointer;
-    margin-right: 15px;
 }
 
 .breadcrumb:last-child {
@@ -774,20 +741,20 @@ section p {
 }
 
 .breadcrumb.active {
+    width: 1.2em;
 	background-color: var(--main-color);
-	width: 1.2em;
 	border-radius: 0.8em;
 	transition: width, 2s, ease-in;
 }
 
 #proposal .background1 {
-    transform: scaleX(-1);
-    object-fit: cover;
-    object-position: -50vw -43vw;
+    opacity: 0.3;
     width: 206vw;
     position: absolute;
     top: 147vh;
-    opacity: 0.3;
+    transform: scaleX(-1);
+    object-fit: cover;
+    object-position: -50vw -43vw;
 }
 
 /* Section #3 -> RIGHT NOW */
@@ -795,14 +762,14 @@ section p {
 .rightNow {
     width: 90%;
     height: 30em;
+    padding-top: 3%;
+    overflow: hidden;
     background-color: var(--bg-white);
     border-radius: 1em;
     background-blend-mode: luminosity;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     border: 1px solid var(--main-color);
-    padding-top: 3%;
-    overflow: hidden;
 }
 
 .titleRightNow {
@@ -812,62 +779,63 @@ section p {
 }
 
 .sliderRightNow {
-    margin-top: 10%;
     height: 30%;
+    margin-top: 10%;
     overflow: hidden;
     position: relative;
 }
 
 .sliderWrap {
     display: flex;
-    height: 100%;
     width: calc(55% * 6);
+    height: 100%;
 }
 
 .sliderCardRightNow {
     display: flex;
-    width: 55%;
-    height: 100%;
-    overflow: hidden;
     flex-direction: column-reverse;
     align-items: center;
-    border-radius: 0.5em;
-    position: relative;
-    box-shadow: var(--neumorphic);
+    width: 55%;
+    height: 100%;
     margin-right: 2%;
+    overflow: hidden;
+    /* relative to be the reference of the content, with position absolute */
+    position: relative;
+    border-radius: 0.5em;
+    box-shadow: var(--neumorphic);
 }
 
 .sliderCardRightNow img.news {
-    position: absolute;
-    object-fit: cover;
     width: 100%;
     height: 100%;
+    opacity: 0.9;
+    position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.9;
+    object-fit: cover;
     filter: brightness(0.8);
 }
 
 .sliderCardRightNow h5 {
-    color: var(--bg-white);
     width: 100%;
+    padding: 0.5em;
     font-size: 0.8em;
     font-weight: 400;
     text-align: center;
     line-height: 1.2em;
-    z-index: 3;
+    color: var(--bg-white);
     background: linear-gradient(to top, var(--color-black) 25%, rgba(0, 0, 0, 0));
-    padding: 0.5em;
+    z-index: 3;
 }
 
 .sliderCardTime {
-    position: absolute;
     display: flex;
-    top: 25%;
     align-items: center;
+    padding: 0 3%;
+    position: absolute;
+    top: 25%;
     background-color: var(--bg-white);
     border-radius: 0.7em;
-    padding: 0 3%;
 }
 
 .sliderCardTime img {
@@ -888,25 +856,25 @@ section p {
 }
 
 .aboutUs {
-    width: 100%;
-    background-image: var(--gradient-div);
-    border-radius: 1em 1em 0 0;
-    padding: 3% 5% 0 5%;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    padding: 3% 5% 0 5%;
+    position: relative;
+    background-image: var(--gradient-div);
+    border-radius: 1em 1em 0 0;
 }
 
 .aboutUs h2 {
-    text-align: center;
-    color: var(--bg-white);
     margin-bottom: 5%;
+    text-align: center;
+    color: var(--bg-white); 
 }
 
 .aboutUs .contentAbout {
-    color: var(--bg-white);
     text-align: center;
+    color: var(--bg-white);
 }
 
 .contentAbout p {
@@ -925,12 +893,12 @@ section p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--color-secondary);
     margin-top: 10%;
     padding-bottom: 2%;
     position: relative;
     bottom: -1%;
     background-color: var(--bg-white);
+    color: var(--color-secondary);
     border-radius: 1em 1em 0 0;
 }
 
@@ -946,11 +914,11 @@ section p {
 }
 
 .faqsIntroduction h3 {
+    padding: 3% 10%;
     position: relative;
     top: -0.1em;
     background-color: var(--main-color);
     color: var(--bg-white);
-    padding: 3% 10%;
     border-radius: 0 0 1em 1em;
 }
 
@@ -967,8 +935,8 @@ section p {
 
 .faqCard .flippable {
     width: 0.5em;
-    align-self: center;
     margin-top: 3%;
+    align-self: center;
     transition: transform 0.5s ease;
 }
 
@@ -984,11 +952,11 @@ section p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    margin: 2em 0;
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    margin: 2em 0;
 }
 
 .subscribeContainer {
@@ -996,7 +964,6 @@ section p {
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* height: 100%; */
     height: 10%;
     margin-top: 5%;
 }
@@ -1014,40 +981,36 @@ section p {
     position: relative;
     width: 100%;
     height: 100%;
-    /* position: relative; */
-    /* display: flex; */
-    /* flex-direction: row-reverse; */
     border-radius: 3em;
 }
 
 .subscription .add-email{
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* display: block; */
     /* change display in JS */
     width: 100%;
     height: 100%;
+    padding: 0 1.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
     border: none;
     outline: none;
-    padding: 0 1.2em;
     font-size: 0.9em;
 }
 
 .subscription .submit-email {
+    height: calc(100% - 0.08em);
+    width: 35%;
+    margin: 0.02em;
+    padding: 0 1.2em;
     position: absolute;
     top: 0;
     right: 0;
-    height: calc(100% - 0.08em);
-    width: 35%;
     border: none;
     border-radius: 3em;
     outline: none;
-    margin: 0.02em;
-    padding: 0 1.2em;
-    cursor: pointer;
     background: var(--color-secondary);
     color: var(--bg-white);
+    cursor: pointer;
     transition: width 0.35s ease-in-out, background 0.35s ease-in-out;
   }
 
@@ -1058,23 +1021,23 @@ section p {
   
 .subscription .submit-email .before-submit,
 .subscription .submit-email .after-submit {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: 400;
-  line-height: 2.2em;
-  transition: display .35s ease-in-out,
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 2.2em;
+    transition: display .35s ease-in-out,
     opacity .35s ease-in-out;
 }
 
 .subscription.done .submit-email .before-submit,
 .subscription:not(.done) .submit-email .after-submit {
-  display: none;
-  opacity: 0;
+    display: none;
+    opacity: 0;
 }
 
 .subscription .submit-email .after-submit {
@@ -1088,11 +1051,10 @@ section p {
 
 /* FOOTER */
 footer {
-    position: absolute;
     width: 100vw;
     height: auto;
     padding: 5%;
-    /* background-color: var(--color-secondary-lightestred); */
+    position: absolute;
     border-radius: 1em 1em 0 0;
     border-top: 1px solid var(--color-secondary-lighgray);
     box-shadow: var(--shadow2);
@@ -1105,8 +1067,8 @@ footer .brand {
 }
 
 footer .brand h2 {
-    font-size: 2em;
     margin-right: 12%;
+    font-size: 2em;
     background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -1120,18 +1082,18 @@ footer .brand h2 {
 }
 
 footer .social-networks button img {
-    width: 5vw;     /* TO DO, CHECK THIS IN MQ */
+    width: 5vw;     
 }
 
 /* :hover on desktop */
 .social-networks button img:active {
-    width: 1.6em;     /* TO DO, CHECK THIS IN MQ */
+    width: 1.6em;   
     transition: all 0.3s ease;
 }
 
 .footercontent {
-    font-size: 0.9em;
     padding-bottom: 2em;
+    font-size: 0.9em;
     text-align: center;
 }
 
@@ -1143,30 +1105,30 @@ footer .social-networks button img {
     font-weight: 300;
 }
 
-/* :hover pseudoselector only on desktop devices breakpoints */
+/* :hover pseudoselector only on desktop devices breakpoints. In this case, apply :active */
 .footerTextLegal p:active {
     color: var(--color-secondary);
 }
 
 /* SCROLL PROGRESS */
 .progress-container {
+    display: block;
     width: 100%;
-    background-color: var(--bg-white);
+    height: 8px;
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 8px;
-    display: block;
-    z-index: 5;
+    background-color: var(--bg-white);
     box-shadow: 3px 3px 10px 10px rgba(0,0,0,.11);
+    z-index: 5;
 }
  
 .progress-bar {
-    background-color: var(--main-color);
-    width: 0;
     display: block;
-    z-index: 10;
+    width: 0;
     height: 8px;
+    background-color: var(--main-color);
+    z-index: 10;
 }
 
 /* RESPONSIVE BREAKPOINTS 320, 480 (horizontal - mobile), 760, 1024, 1200, 1600 */
@@ -1206,9 +1168,9 @@ footer .social-networks button img {
     }
 
     #CTAhome {
-        font-size: 4vw;
-        top: 5vw;
         width: 80%;
+        top: 5vw;
+        font-size: 4vw;
     }
 
     .markets img {
