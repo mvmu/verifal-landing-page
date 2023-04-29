@@ -73,7 +73,8 @@ html, body {
     opacity: 0.7;
     z-index: -1;
     object-fit: cover;
-    object-position: 57vw 0;
+    /* object-position: 57vw 0; */
+    object-position: 24vw 0;
 }
 
 .maincontainer {
@@ -497,19 +498,6 @@ section p {
     text-align: center;
 }
 
-/* .home-text p,h1{
-    grid-column: 2 / 3;
-    grid-row: 1;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    top: 10%;
-    align-content: space-between;
-    align-items: center; /* added this to align text, image and button
-} */
-
 .home-img {
     display: flex;
     flex-direction: column;
@@ -615,7 +603,8 @@ section p {
 } 
 
 .cardsContainerColumn1 img {
-    width: 38vw;    
+    width: 38vw; 
+    max-width: 30em;  
     position: relative;
     bottom: -5%;
 }
@@ -633,7 +622,7 @@ section p {
 .cardFeature {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     background-color: var(--bg-white);
     box-shadow: var(--neumorphic);
     padding: 5% 7%;
@@ -690,7 +679,7 @@ section p {
 }
 
 .sliderProposal {
-    width: 90%;
+    width: 100%;
     height: 15em;
     overflow: hidden;
     padding: 3%;
@@ -705,10 +694,9 @@ section p {
     box-shadow: var(--neumorphic);
 }
 
-/* #proposal {
-    height: 130vh; /* override */
-    /* margin-bottom: 6em; 
-}  */
+.sliderAndButtons {
+    width: 90%;
+}
 
 .slide {
     height: 90%;
@@ -759,7 +747,7 @@ section p {
 
 .buttonSlider {
     position: relative;
-    width: 90%;
+    width: 100%;
     top: -3em;
     right: 0;
     display: flex;
@@ -969,6 +957,7 @@ section p {
 .faqCard h5 {
     padding-top: 0.5em;
     text-align: center;
+    font-weight: 500;
 }
 
 .faqCard p {
@@ -1184,10 +1173,10 @@ footer .social-networks button img {
 
 /*// 320 - 480 -> mobile*/
 /*// 481 - 768 -> tablets*/
-/*// 769 - 960 -> laptop small*/
-/*// 961 - 1200 -> desktop large screen*/
-/*// 1201 - 1600 -> XL*/
-/*// >= 1601 -> 4K*/
+/*// 769 - 960 -> large tablets*/
+/*// 961 - 1200 -> desktop*/
+/*// 1201 - 1600 -> desktop large*/
+/*// >= 1601 -> desktop extralarge-4K*/
 
 /* iPad/Tablet & small laptops */
 @media screen and (min-width: 481px) and (max-width: 960px) {
@@ -1216,11 +1205,6 @@ footer .social-networks button img {
         font-size: 1.6em;
     }
 
-    /* .home {
-        grid-template-columns: 10% 40% 40% 10%;
-        grid-template-rows: 13% 65% auto;
-    } */
-
     #CTAhome {
         font-size: 4vw;
         top: 5vw;
@@ -1236,8 +1220,8 @@ footer .social-networks button img {
     }
 
     .home-img img {
-        margin-bottom: -15%;
-        height: 50em;
+        margin-bottom: -17%;
+        /* height: 50em; */
     }
 
     .social-networks button img {
@@ -1252,14 +1236,20 @@ footer .social-networks button img {
         height: 54em;
     }
 
+    .sliderAndButtons {
+        width: 90%;
+    }
+
     .sliderProposal {
-        height: 22em;
+        width: 100%;
+        height: 23em;
         top: -8.3em;
     }
 
     .buttonSlider {
-        top: -8em;
+        width: 100%;
         padding: 5%;
+        top: -10em;
     }
 
     .breadcrumb {
@@ -1360,7 +1350,7 @@ footer .social-networks button img {
 
 }
 
-/* Laptop only */
+/* Laptop only, general settings for all desktop devices (landscape) */
 @media screen and (min-width: 961px) {
 
     h2 {
@@ -1482,7 +1472,7 @@ footer .social-networks button img {
     .markets p.available {
         display: block;
         font-size: 3vw;
-        font-weight: 600;
+        font-weight: 400;
         color: var(--main-color);
         background-color: var(--bg-white-bigCard);
         box-shadow: var(--shadow2);
@@ -1550,7 +1540,7 @@ footer .social-networks button img {
 
     .titleSliderContainer h2 {
         position: absolute;
-        top: -15%;
+        top: -10%;
         right: 6%;
     }
 
@@ -1563,7 +1553,10 @@ footer .social-networks button img {
 
     .sliderAndButtons {
         width: 100%;
-        height: 16em;
+        height: 100%;
+        /* height: 16em; */
+        margin-right: 3%;
+        margin-top: 10%;
     }
 
     .sliderProposal {
@@ -1631,6 +1624,7 @@ footer .social-networks button img {
     
 }
 
+/* Large laptops */
 @media screen and (min-width: 1200px) {
     .social-networks {
         height: 90%;
@@ -1667,170 +1661,114 @@ footer .social-networks button img {
         max-width: 12em;
     }
 
+    .proposal {
+        width: 100%;
+        margin-top: 5%;
+    }
+
     .cardsContainer {
-        grid-template-columns: repeat(6, 1fr);
+        display: block;
+        width: 100%;
+        height: 49em;
+        left: 0;
+        border-radius: 46px;
     }
 
     .cardsContainerColumn1 img {
         width: 24vw;
-    }
-}
-
-
-
-/* @media screen and (min-width: 961px) {
-    .maincontainer {
-        width: 100%;
-        height: 100%;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-     .maincontainer img:first-child {
-         top: 0; 
-    } 
-    .button-scroll {
-        top: calc(100vh - 500px);
-        display: block;
-    }
-    .language {
-        right: 1vw;
-    }
-    .social-networks {
-        left: 0;
-    }
-    .social-networks button img:hover {
-        transform: scale(1.18);
-        transition: all .2s ease-in;
+        position: absolute;
+        left: 38%;
     }
 
-    #CTAhome {
-        width: 45vw;
-        font-size: 3vw;
-    }
-
-    .proposal {
+    .cardsContainerColumn2 {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-  } */
-
-/* @media screen and (min-width: 480px) and (max-width: 760px) {
-    #home {
-        grid-template-columns: 10% 40% 40% 10%;
-        grid-template-rows: 13% 65% auto;
-    }
-    .home-text h1 {
-        line-height: 7vw;
-        text-align: left;
-        font-weight: 400;
-    }
-    h1 .gradient-text {
-        font-size: 7vw;
-        font-weight: 700;
-        line-height: 10%;
-    }
-    .home-text p {
-        font-size: 3vw;
-        text-align: left;
-    }
-    .home-text {
-        grid-column: 2 / 3;
-        grid-row: 2;
-        top: 0;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    #CTAhome {
-        font-size: 3vw;
-        top: 3vw;
-    }
-    .home-img {
-        grid-column: 3 / 4;
-        grid-row: 2;
-        justify-content: flex-start;
-    }
-    .home-img img {
-        max-height: 374px;
-        margin-bottom: -30%;
-    }
-    .markets p {
-        font-size: 3vw;
-        text-align: left;
-        display: block;
-        color: #272221;
-        font-weight: 500;
-    }
-    .markets img {
-        height: 5vw;
-        margin: 5% 0;
-    }
-    .markets-img {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 85%;
-    }
-    .markets {
-        grid-column: 2 / 3;
-        grid-row: 2;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
-        top: 20%;
+        grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+        /* grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr;   */
         position: relative;
+        top: -5em;
+        width: 100%;
+        height: 38em;
     }
-    .social-networks {
-        grid-column: 2 / 3;
+
+    .cardFeature .flippable {
+        display: none;
+    }
+
+    .cardFeature {
+        height: 9em;
+        justify-content: center;
+    }
+
+    .featureTitle {
+        flex-direction: column;
+        height: 70%;
+    }
+
+    .cardFeature:first-child {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .cardFeature:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .cardFeature:nth-child(3) {
+        grid-column: 2;
         grid-row: 3;
-        width: 80%;
-        height: min-content;
-        left: 0;
-        top: 10%;
-        flex-direction: row;
-        justify-content: space-between;
+    }
+
+    .cardFeature:nth-child(4) {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .cardFeature:nth-child(5) {
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    .cardFeature:nth-child(6) {
+        grid-column: 5;
+        grid-row: 2;
+    }
+
+    .sliderContainer {
+        margin-top: 15%;
+        margin-left: 3%;
+    }
+
+    .titleSliderContainer h2 {
+        top: 7%;
+    }
+
+    .sliderProposal {
+        height: 16em;
+    }
+
+    .contentAbout p {
+        font-size: 1.5em;
+        padding: 0 10%;
     }
 }
-@media screen and (min-width: 761px) and (max-width: 1024px) {
-    .maincontainer {
-        width: 100%;
-        height: 100%;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-    header.menuDesktop {
-        display: flex;
-    }
-    header.menuMobile {
-        display: none;
-    }
-     .maincontainer img:first-child {
-        /* top: 0; 
+
+/* 4K Extra large laptops */
+@media screen and (min-width: 1600px) {
+   .home-text h1 {
+        line-height: 8vh;
     } 
-    .button-scroll {
-        top: calc(100vh - 500px);
-        display: block;
+
+    #proposal .background1 {
+        top: 163vh;
     }
-    .language {
-        right: 1vw;
+
+    .footerText {
+        padding: 3em;
     }
-    .social-networks button img:hover {
-        transform: scale(1.18);
-        transition: all .2s ease-in;
+
+    .formContent {
+        height: 3.7em;
+        width: 75%;
     }
-    .home-img img {
-        margin-bottom: -10%;
-    }
-    #CTAhome {
-        width: 45vw;
-        font-size: 3vw;
-    }
-  }
-  @media screen and (min-width: 1280px) {
-    header.menuMobile {
-        display: none;
-    }
-    header.menuDesktop {
-        display: flex;
-    }
-} 
+}

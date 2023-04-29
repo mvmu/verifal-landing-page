@@ -82,20 +82,44 @@ function scrollEffect() {
 // PROPOSAL FUNCTIONS
 
 //  Dropdown description in cards
-
 proposalButtons.forEach(button => {
-	button.addEventListener("click", () => {
-		const display = button.querySelector(".featureDescription").style.display;
-		closeAllButtons();
-		if (display === "block") {
-			button.querySelector(".featureDescription").style.display = "none";
-			button.querySelector(".flippable").style.transform = "scaleY(1)";
-		} else {
-			button.querySelector(".featureDescription").style.display = "block";
-			button.querySelector(".flippable").style.transform = "scaleY(-1)";
-		}
-	});
+
+	const frontSide = button.querySelector(".featureTitle");
+	const description = button.querySelector(".featureDescription");
+	const arrow = button.querySelector(".flippable");
+
+	if (isMobileOrTablet) {
+		button.addEventListener("click", (e) => onCardClick(description, arrow));
+	}
+	else {
+		button.addEventListener("mouseover", (e) => onCardOver(e, description, frontSide));
+		button.addEventListener("mouseout", (e) => onCardOut(e, description, frontSide));
+	}
 });
+
+function onCardOver(event, description, frontSide) {
+	description.style.display = "block";
+	frontSide.style.display = "none";
+	event.stopImmediatePropagation();
+}
+
+function onCardOut(event, description, frontSide) {
+	description.style.display = "none";
+	frontSide.style.display = "flex";
+	event.stopImmediatePropagation();
+}
+
+function onCardClick(description, arrow) {
+	closeAllButtons();
+
+	if (description.style.display === "block") {
+		description.style.display = "none";
+		arrow.style.transform = "scaleY(1)";
+	} else {
+		description.style.display = "block";
+		arrow.style.transform = "scaleY(-1)";
+	}
+}
 
 function closeAllButtons() {
 	proposalButtons.forEach(button => {
@@ -375,6 +399,3 @@ submitEmail.addEventListener("mousedown", (e) => {
 		document.querySelector("input.add-email").style.display = "none";
 	}
   });
-
-
-
