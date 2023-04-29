@@ -68,10 +68,8 @@ function headerScrollEffect(){
 		let scroll = getCurrentScroll();
 			if(scroll >= window.innerHeight * 0.07){
 				platformClassList.add("reduced");
-                console.log("haciendo scroll");
 			}else{
 				platformClassList.remove("reduced");
-                console.log("no scroll");
 			} 
 		});
 	function getCurrentScroll(){
@@ -313,10 +311,6 @@ newsBottom.forEach(news => {
 let lastTopChild = newsSliderTop.lastElementChild;
 let lastBottomChild = newsSliderBottom.lastElementChild;
 
-// newsSliderTop.addEventListener("scroll", e => {
-// 	console.log(e.currentTarget.scrollLeft);
-// });
-
 
 function createNewsCard(data) {
 	const image = document.createElement("img");
@@ -404,12 +398,20 @@ function closeAllButtonsFaq() {
 // Note: there is no backend, its just a mock
 
 const submitEmail = document.querySelector(".submit-email");
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-submitEmail.addEventListener("mousedown", (e) => {
+submitEmail.addEventListener("click", (e) => {
 	e.preventDefault();
 	const emailAddress = document.getElementById("emailSubscribe").value;
 	if (emailAddress) { 
-		document.querySelector(".subscription").classList.add("done");
-		document.querySelector("input.add-email").style.display = "none";
+		if(emailRegex.test(emailAddress)) {
+			document.querySelector(".subscription").classList.add("done");
+			document.querySelector("input.add-email").style.display = "none";
+			console.log(`Sending ${emailAddress} to backend`);
+		} else {
+			alert("You must enter a valid email address!");
+		}
 	}
   });
+
+  
