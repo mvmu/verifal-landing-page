@@ -98,7 +98,7 @@ strong {
 header.menuDesktop {
     display: none;
     align-items: center;
-    padding: 20px;
+    padding: 1.25em;
     width: 100%;
     height: 7em;
     position: fixed;
@@ -130,7 +130,7 @@ header.reduced {
     gap: 1em;
     width: 70%;
     height: 2.5em;
-    margin: 0 20px;
+    margin: 0 1.25em;
     margin-left: 5%;
     list-style: none;
 }
@@ -244,7 +244,7 @@ header.menuMobile .brandName p {
     flex-direction: column;
     width: 3.12em;
 	height: max-content;
-	padding: 3px 0;
+	padding: 0.18em 0;
     background-color: transparent;
     cursor: pointer;
 }
@@ -1141,7 +1141,7 @@ footer .socialNetworks button img {
     z-index: 10;
 }
 
-/* RESPONSIVE BREAKPOINTS 320, 480 (horizontal - mobile), 760, 1024, 1200, 1600 */
+/* RESPONSIVE BREAKPOINTS */
 
 /*// 320 - 480 -> mobile*/
 /*// 481 - 768 -> tablets*/
@@ -1710,12 +1710,12 @@ footer .socialNetworks button img {
     }
 
     .homeText h1 {
-        line-height: 7vh;
+        line-height: 9vh;
     }
 
     .homeImg img {
         height: 87%;
-        left: 9%;
+        left: 30%;
     }
 
     .markets {
@@ -1724,7 +1724,7 @@ footer .socialNetworks button img {
 
     .markets p.available {
         font-size: 2.4vw;
-        margin-top: 3vh;
+        margin-top: 6vh;
     }
 
     .marketsImg {
@@ -1748,7 +1748,7 @@ footer .socialNetworks button img {
         width: 100%;
         height: 49em;
         left: 0;
-        border-radius: 46px;
+        border-radius: 2.87em;
     }
 
     .cardsContainerColumn1 img {
