@@ -174,14 +174,14 @@ header.reduced {
 
 .download:hover {
     background: var(--bg-white);
-    box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8);
+    box-shadow: var(--neumorphic);
     color: var(--main-color);
     transition: all 0.2s ease;
 }
 
 .download .active {
     background: var(--bg-white);
-    box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8);
+    box-shadow: var(--neumorphic);
     background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -334,7 +334,7 @@ header.menuMobile .brandName p {
 }
 
 .language:hover {
-    box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8); 
+    box-shadow: var(--neumorphic); 
     border: none;
     transition: all 0.2s ease-in;
 }
@@ -521,7 +521,7 @@ section p {
 }
 
 #CTAhome {
-    box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8);
+    box-shadow: var(--neumorphic);
     position: relative;
     font-size: 5vw;
     z-index: 2;
@@ -1724,6 +1724,7 @@ footer .socialNetworks button img {
 
     .markets p.available {
         font-size: 2.4vw;
+        margin-top: 3vh;
     }
 
     .marketsImg {
@@ -1835,8 +1836,16 @@ footer .socialNetworks button img {
 /* 4K Extra large laptops */
 @media screen and (min-width: 1601px) {
    .homeText h1 {
-        line-height: 8vh;
+        line-height: 9vh;
     } 
+
+    .markets p.available {
+        margin-top: 10vh;
+    }
+
+    .sliderProposal {
+        height: 21em;
+    }
 
     #proposal .background1 {
         top: 163vh;
