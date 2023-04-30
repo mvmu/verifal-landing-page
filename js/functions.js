@@ -9,7 +9,7 @@ const proposalButtons = document.querySelectorAll(".cardFeature");
 
 const botonNav = document.querySelector(".open");
 const links = document.querySelectorAll(".navLink");
-const linksDesktop = document.querySelectorAll(".nav-item");
+const linksDesktop = document.querySelectorAll(".navItem");
 const hamburgerMenu = document.querySelector(".hamburger");
 
 // Hamburger menu dropdown
@@ -325,7 +325,7 @@ function createNewsCard(data) {
 	card.classList.add("sliderCardRightNow");
 
 	const timeLogo = document.createElement("img");
-	timeLogo.src = "img/news/hot-icon.svg";
+	timeLogo.src = "img/news/hotIcon.svg";
 	timeLogo.alt = "hot news icon";
 
 	const timeText = document.createElement("p");
@@ -414,4 +414,3 @@ submitEmail.addEventListener("click", (e) => {
 	}
   });
 
-  
