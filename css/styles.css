@@ -509,7 +509,6 @@ section p {
 }
 
 .markets img {
-    /* box-shadow: -10px -10px 20px var(--bg-white), 5px 5px 20px rgba(166, 171, 189, 0.8); */
     filter: drop-shadow(2px 4px 10px rgba(166, 171, 189, 0.8));
     height: 10vw; /* TODO ADD MEDIA QUERY BP FOR THIS */
     max-width: 7.5em;
