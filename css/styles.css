@@ -1292,7 +1292,7 @@ footer .social-networks button img {
     }
 }
 
-/* an specific MQ to throtting inmobile */
+/* an specific MQ throttling in mobile */
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
     h2 {
@@ -1337,25 +1337,58 @@ footer .social-networks button img {
     .proposal {
         width: 100%;
         padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+
+    .sliderContainer {
+        height: fit-content;
+        max-height: 25em;
+    }
+
+    .sliderAndButtons {
+        display: flex;
+        flex-direction: column;
     }
 
     .buttonSlider {
-        width: 80%;
+        width: 100%;
         padding: 5%;
-        top: -10em;
-        right: -10%;
+        top: -2em;
     }
 
+    .sliderProposal {
+        height: 18em;
+        top: 1.7em;
+    }
     .slide {
         height: 80%;
     }
 
+    /* Right now section */
+
     .sliderRightNow {
+        height: fit-content;
+        padding-bottom: 10%;
         margin-top: 0;
     }
 
     .sliderWrap {
-        height: 60%;
+        height: 60vh;
+    }
+
+    .rightNow {
+        height: fit-content;
+    }
+
+    .titleRightNow {
+        padding-bottom: 10%;
+    }
+
+    /* Footer texts */
+
+    footer p {
+        font-size: 1em;
     }
 }
 
