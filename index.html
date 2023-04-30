@@ -7,12 +7,11 @@
     <link rel="icon" href="img/icons/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,
-    400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" class="rel">
 </head>
 <body>
-    <div class="maincontainer">
+    <div class="mainContainer">
         <!-- The BG will be embedded as an img file, out of the section to make it independent -->
         <img class="background1" src="img/Background-Looper.svg">
         <!-- HEADERS -->
@@ -20,7 +19,7 @@
         <header class="menuDesktop">
             <!-- Inside the header, there is a div that contains the logo and the name of the app -->
             <div class="brand">
-                <a href="#home" class="nav-link" id="nav-link">
+                <a href="#home" class="navLink">
                     <img src="img/icons/logo.svg" alt="Verifal logo">
                     <p>Verifal</p>
                 </a>
@@ -29,20 +28,20 @@
             <nav>
                 <ul>
                     <!-- list items to identify sections, using href to direct user navigation -->
-                    <li class="navItem activelinks">
-                        <a href="#home" class="navLink" id="nav-link">Home</a>
+                    <li class="navItem activeLinks">
+                        <a href="#home" class="navLink">Home</a>
                     </li>
                     <li class="navItem">
-                        <a href="#proposal" class="navLink" id="nav-link">Proposal</a>
+                        <a href="#proposal" class="navLink">Proposal</a>
                     </li>
                     <li class="navItem">
-                    <a href="#rightNow" class="navLink" id="nav-link">Right now</a>
+                    <a href="#rightNow" class="navLink">Right now</a>
                     </li>
                     <li class="navItem">
-                    <a href="#about" class="navLink" id="nav-link">About</a>
+                    <a href="#about" class="navLink">About</a>
                     </li>
                     <!-- Download button with onclick interaction on CSS -->
-                    <li class="navItem-button">
+                    <li class="navItemButton">
                         <button class="download">Download</button>
                     </li>
                 </ul>
@@ -53,7 +52,7 @@
         <!-- Hamburger menu for mobile devices -->
         <header class="menuMobile">
             <div class="brand">
-                <a href="#home" class="nav-link" id="nav-link">
+                <a href="#home" class="navLink" id="navLink">
                     <img src="img/icons/logo.svg" alt="Verifal logo">
                 </a>
             </div>
@@ -90,13 +89,13 @@
             <!-- a div inside the section to have a bigger control of the content -->
             <div class="home">
                 <!-- This button will be displayed only on Desktop devices. A button to redirect the user to Home -->
-                <button class="button-scroll">
+                <button class="buttonScroll">
                     <a href="#home">
                         <img src="img/arrowScroll.svg" alt="button to scroll up">
                     </a>
                 </button>
                 <!-- Social Networks icons, hover/click on CSS -->
-                <div class="social-networks">
+                <div class="socialNetworks">
                     <button>
                         <img src="img/icons/icon/sn-instagram.svg" alt="instagram button">
                     </button>
@@ -111,11 +110,11 @@
                     </button>
                 </div> 
                 <!-- Principal block of Home content, with a claim, a picture + CTA and buttons to markets -->
-                <div class="home-text">
+                <div class="homeText">
                     <p>Become part of</p>
-                    <h1>the <span class="gradient-text">information revolution</span></h1>
+                    <h1>the <span class="gradientText">information revolution</span></h1>
                 </div>
-                <div class="home-img">
+                <div class="homeImg">
                     <img src="img/mockup01.svg" alt="Home Verifal App">
                     <button class="download" id="CTAhome">Download</button>
                 </div>
@@ -123,7 +122,7 @@
                     <!-- only visible on desktop -->
                     <p class="available">AVAILABLE NOW</p>
                     <!-- markets buttons -->
-                    <div class="markets-img">
+                    <div class="marketsImg">
                         <img src="img/Buttons/appstorelight.svg" alt="App Store">
                         <img src="img/Buttons/googleplaylight.svg" alt="Google Play">
                     </div>
@@ -153,7 +152,7 @@
                         <div class="cardFeature">
                             <div class="featureTitle">
                                 <h3>Verify</h3>
-                                <img src="img/icons/Icon/Icons/VectorVerify.svg" alt="verify feature-icon">
+                                <img src="img/icons/icon/icons/VectorVerify.svg" alt="verify feature-icon">
                             </div>
                             <p class="featureDescription">The best weapon against fake news</p>
                             <img src="img/Buttons/VectorArrow.svg" class="flippable" alt="arrow">
@@ -161,7 +160,7 @@
                         <div class="cardFeature">
                             <div class="featureTitle">
                                 <h3>Comment</h3>
-                                <img src="img/icons/Icon/Icons/VectorComment.svg" alt="comment feature-icon">
+                                <img src="img/icons/icon/icons/VectorComment.svg" alt="comment feature-icon">
                             </div>
                             <p class="featureDescription">Get more feedbacks about the topic</p>
                             <img src="img/Buttons/VectorArrow.svg" class="flippable" alt="arrow">
@@ -169,7 +168,7 @@
                         <div class="cardFeature">
                             <div class="featureTitle">
                                 <h3>Save</h3>
-                                <img src="img/icons/Icon/Icons/vectorSaved.svg" alt="save feature-icon">
+                                <img src="img/icons/icon/icons/vectorSaved.svg" alt="save feature-icon">
                             </div>
                             <p class="featureDescription">Don't lose anything, create your collections and read it later</p>
                             <img src="img/Buttons/VectorArrow.svg" class="flippable" alt="arrow">
@@ -177,7 +176,7 @@
                         <div class="cardFeature">
                             <div class="featureTitle">
                                 <h3>Report</h3>
-                                <img src="img/icons/Icon/Icons/VectorReport.svg" alt="report feature-icon">
+                                <img src="img/icons/icon/icons/VectorReport.svg" alt="report feature-icon">
                             </div>
                             <p class="featureDescription">If the content is fake or abusive, don't hesitate to report it</p>
                             <img src="img/Buttons/VectorArrow.svg" class="flippable" alt="arrow">
@@ -185,7 +184,7 @@
                         <div class="cardFeature">
                             <div class="featureTitle">
                                 <h3>Like</h3>
-                                <img src="img/icons/Icon/Icons/VectorLike.svg" alt="like feature-icon">
+                                <img src="img/icons/icon/icons/VectorLike.svg" alt="like feature-icon">
                             </div>
                             <p class="featureDescription">Do you like it? notify it and help to share it!</p>
                             <img src="img/Buttons/VectorArrow.svg" class="flippable" alt="arrow">
@@ -193,7 +192,7 @@
                         <div class="cardFeature">
                             <div class="featureTitle">
                                 <h3>Send</h3>
-                                <img src="img/icons/Icon/Icons/VectorSend.svg" alt="send feature-icon">
+                                <img src="img/icons/icon/icons/VectorSend.svg" alt="send feature-icon">
                             </div>
                             <p class="featureDescription">Share and forward on social networks</p>
                             <img src="img/Buttons/VectorArrow.svg" class="flippable" alt="arrow">
@@ -315,15 +314,16 @@
                         <div class="formContent">
                             <!-- the form starts here -->
                             <form class="subscription">
-                                <input id="emailSubscribe" class="add-email" type="email" placeholder="subscribe@me.now">
-                                <button class="submit-email" type="button">
+                                <input id="emailSubscribe" class="addEmail" type="email" placeholder="subscribe@me.now">
+                                <button class="submitEmail" type="button">
                                     <!-- interaction -->
-                                    <span class="before-submit">Subscribe</span>
-                                    <span class="after-submit">Thank you for subscribing!</span>
+                                    <span class="beforeSubmit">Subscribe</span>
+                                    <span class="afterSubmit">Thank you for subscribing!</span>
                                 </button>
                             </form>
                         </div>
                     </div>
+            </div>
             </div>
         </section>
         <!-- SCROLL PROGRESS -->
@@ -333,12 +333,12 @@
         <!-- FOOTER -->
         <footer>
             <!-- a div to control the footer content -->
-            <div class="footercontent">
+            <div class="footerContent">
                 <!-- brand reference -->
                 <div class="brand">
                     <h2>Verifal</h2>
                     <!-- SM buttons -->
-                    <div class="social-networks">
+                    <div class="socialNetworks">
                         <button>
                             <img src="img/icons/icon/sn-instagram.svg" alt="instagram button">
                         </button>

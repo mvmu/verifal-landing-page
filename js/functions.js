@@ -31,10 +31,10 @@ links.forEach(link => {
 	link.addEventListener("click", function() {
 		// remove active class in every element/link
 		links.forEach(l => {
-			l.classList.remove("activelinksNav");
+			l.classList.remove("activeLinksNav");
 		});
 		// add active class to selected element/link
-		link.classList.toggle("activelinksNav");
+		link.classList.toggle("activeLinksNav");
 		// set a timeOut to hide the hamb menu
 		setTimeout(() => {
 			hamburgerMenu.style.display = "none";
@@ -46,13 +46,13 @@ links.forEach(link => {
 linksDesktop.forEach(link => {
 	link.addEventListener("click", () => {
 		removeOthersActiveLink(linksDesktop);
-		link.classList.toggle("activelinks");
+		link.classList.toggle("activeLinks");
 	})
 });
 
 function removeOthersActiveLink(links) {
 	links.forEach(link => {
-		link.classList.remove("activelinks");
+		link.classList.remove("activeLinks");
 	});
 }
 
@@ -102,7 +102,7 @@ proposalButtons.forEach(button => {
 	const arrow = button.querySelector(".flippable");
 
 	if (isMobileOrTablet) {
-		button.addEventListener("click", (e) => onCardClick(description, arrow));
+		button.addEventListener("click", () => onCardClick(description, arrow));
 	}
 	else {
 		button.addEventListener("mouseover", (e) => onCardOver(e, description, frontSide));
@@ -397,7 +397,7 @@ function closeAllButtonsFaq() {
 // Form dynamism
 // Note: there is no backend, its just a mock
 
-const submitEmail = document.querySelector(".submit-email");
+const submitEmail = document.querySelector(".submitEmail");
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 submitEmail.addEventListener("click", (e) => {
@@ -406,7 +406,7 @@ submitEmail.addEventListener("click", (e) => {
 	if (emailAddress) { 
 		if(emailRegex.test(emailAddress)) {
 			document.querySelector(".subscription").classList.add("done");
-			document.querySelector("input.add-email").style.display = "none";
+			document.querySelector("input.addEmail").style.display = "none";
 			console.log(`Sending ${emailAddress} to backend`);
 		} else {
 			alert("You must enter a valid email address!");
