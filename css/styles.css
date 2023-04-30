@@ -1150,7 +1150,7 @@ footer .social-networks button img {
 /*// 1201 - 1600 -> desktop large*/
 /*// >= 1601 -> desktop extralarge-4K*/
 
-/* iPad/Tablet & small laptops */
+/* iPad/Tablet & small laptops. General settings to override in each case */
 @media screen and (min-width: 481px) and (max-width: 960px) {
     h2 {
         font-size: 2.5em;
@@ -1234,7 +1234,8 @@ footer .social-networks button img {
     }
 
     .titleSliderContainer img {
-        width: 26em;
+        width: 32vw;
+        max-width: 26em;
         top: -20%;
     }
 
@@ -1291,8 +1292,75 @@ footer .social-networks button img {
     }
 }
 
+/* an specific MQ to throtting inmobile */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    h2 {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 1.4em;
+    }
+
+    .home-text p, .subscription .add-email, .formContainer p, .slide p, p.featureDescription, .answerFaq, .contentAbout p {
+        font-size: 1.1em;
+    }
+
+    .background1 {
+        width: 130vw;
+    }
+
+    .home {
+        padding-top: 15%;
+    }
+
+    .social-networks button img {
+        width: 5vw;
+        max-width: 30px;
+    }
+
+    .markets-img {
+        width: 80%;
+    }
+
+    .markets img {
+        max-width: 9em;
+    }
+
+    #proposal .background1 {
+        width: 224vw;
+        top: 147vh;
+        object-position: -50vw 30vw;
+    }
+
+    .proposal {
+        width: 100%;
+        padding-top: 10%;
+    }
+
+    .buttonSlider {
+        width: 80%;
+        padding: 5%;
+        top: -10em;
+        right: -10%;
+    }
+
+    .slide {
+        height: 80%;
+    }
+
+    .sliderRightNow {
+        margin-top: 0;
+    }
+
+    .sliderWrap {
+        height: 60%;
+    }
+}
+
 /* Tablets only */
-@media screen and (min-width: 768px) and (max-width: 960px) {
+@media screen and (min-width: 769px) and (max-width: 960px) {
     .open span.bar {
         width: 2.5em;
         height: 0.4em;
@@ -1322,7 +1390,7 @@ footer .social-networks button img {
 
 }
 
-/* Laptop only, general settings for all desktop devices (landscape) */
+/* Laptop only, general settings for all desktop devices (landscape) to override */
 @media screen and (min-width: 961px) {
     h2 {
         font-size: 2.5em;
@@ -1599,7 +1667,7 @@ footer .social-networks button img {
 }
 
 /* Large laptops */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
     .social-networks {
         height: 90%;
     }
@@ -1728,7 +1796,7 @@ footer .social-networks button img {
 }
 
 /* 4K Extra large laptops */
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1601px) {
    .home-text h1 {
         line-height: 8vh;
     } 
