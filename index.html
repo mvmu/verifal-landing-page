@@ -14,19 +14,20 @@
     <div class="maincontainer">
         <!-- The BG will be embedded as an img file, out of the section to make it independent -->
         <img class="background1" src="img/Background-Looper.svg">
+        <!-- HEADERS -->
         <!-- The header will contain logo, nav bar and language settings -->
         <header class="menuDesktop">
-            <!-- Inside the header, there is a div that contains the logo and the name of the app/company -->
+            <!-- Inside the header, there is a div that contains the logo and the name of the app -->
             <div class="brand">
                 <a href="#home" class="nav-link" id="nav-link">
                     <img src="img/icons/logo.svg" alt="Verifal logo">
                     <p>Verifal</p>
                 </a>
-                <!-- <p>Verifal</p> -->
             </div>
+            <!-- Navigation on desktop -->
             <nav>
                 <ul>
-                    <!-- TO DO: JS. NO HOVERING WHILE A LINK IS ACTIVE -->
+                    <!-- list items to identify sections, using href to direct user navigation -->
                     <li class="nav-item activelinks">
                         <a href="#home" class="navLink" id="nav-link">Home</a>
                     </li>
@@ -39,12 +40,13 @@
                     <li class="nav-item">
                     <a href="#about" class="navLink" id="nav-link">About</a>
                     </li>
-                    <!-- TO DO: JS. ON CLICK GOES TO .DOWNLOAD ACTIVE -->
+                    <!-- Download button with onclick interaction on CSS -->
                     <li class="nav-item-button">
                         <button class="download">Download</button>
                     </li>
                 </ul>
             </nav>
+            <!-- Prev Language menu settings / just mock, no content inside -->
             <button class="language">English</button>
         </header>
         <!-- Hamburger menu for mobile devices -->
@@ -57,6 +59,7 @@
             <div class="brandName">
                 <p>Verifal</p>
             </div>
+            <!-- nav mobile icon -->
             <div class="open">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -64,6 +67,7 @@
             </div>
             <nav class="hamburger">
                 <ul class="navMenu">
+                    <!-- list items to identify sections, using href to direct user navigation -->
                     <li>
                         <a href="#home" class="navLink">Home</a>
                     </li>
@@ -82,14 +86,15 @@
         <!-- Divide the different pages into sections with ID -->
         <!-- Section HOME, dedicated to CTA -->
         <section id="home">
+            <!-- a div inside the section to have a bigger control of the content -->
             <div class="home">
-                <!-- This button will be displayed only on Desktop devices -->
+                <!-- This button will be displayed only on Desktop devices. A button to redirect the user to Home -->
                 <button class="button-scroll">
                     <a href="#home">
                         <img src="img/arrowScroll.svg" alt="button to scroll up">
                     </a>
                 </button>
-                <!-- Social Networks buttons -->
+                <!-- Social Networks icons, hover/click on CSS -->
                 <div class="social-networks">
                     <button>
                         <img src="img/icons/icon/sn-instagram.svg" alt="instagram button">
@@ -104,7 +109,7 @@
                         <img src="img/icons/icon/sn-pinterest.svg" alt="pinterest button">
                     </button>
                 </div> 
-                <!-- Principal block of content, with a claim, a picture + CTA and buttons to markets -->
+                <!-- Principal block of Home content, with a claim, a picture + CTA and buttons to markets -->
                 <div class="home-text">
                     <p>Become part of</p>
                     <h1>the <span class="gradient-text">information revolution</span></h1>
@@ -114,13 +119,16 @@
                     <button class="download" id="CTAhome">Download</button>
                 </div>
                 <div class="markets">
+                    <!-- only visible on desktop -->
                     <p class="available">AVAILABLE NOW</p>
+                    <!-- markets buttons -->
                     <div class="markets-img">
                         <img src="img/Buttons/appstorelight.svg" alt="App Store">
                         <img src="img/Buttons/googleplaylight.svg" alt="Google Play">
                     </div>
                 </div>  
             </div> 
+            <!-- Arrow to indicate scroll down -->
             <div class="arrowDiv">
                 <div class="arrowWrapper">
                     <span class="arrowIcon"></span>
@@ -133,11 +141,14 @@
             <div class="proposal">
                 <!-- GRID -->
                 <div class="cardsContainer"> 
+                    <!-- First block of content with tittle and picture -->
                     <div class="cardsContainerColumn1">
                         <h2>What can <br> you do?</h2>
                         <img src="img/mockup02.svg" class="imgCardsContainer" alt="publish features">
                     </div>
+                    <!-- Second block of content, container of features cards -->
                     <div class="cardsContainerColumn2">
+                        <!-- Feature cards with tittle, icon, dropdown text and arrows with move -->
                         <div class="cardFeature">
                             <div class="featureTitle">
                                 <h3>Verify</h3>
@@ -188,16 +199,21 @@
                         </div>
                     </div>
                 </div>
+                <!-- Second container, an slider to explain more about the main features -->
                 <div class="sliderContainer">
+                    <!-- container to join picture and title of microsection -->
                     <div class="titleSliderContainer">
                         <img src="img/mockup03.svg" class="imgSliderContainer" alt="collection features">
                         <h2>Discover... <br> and save!</h2>
                     </div>
+                    <!-- a div to put together the slides and the direction indicators/buttons -->
                     <div class="sliderAndButtons">
+                        <!-- div of buttons (prev/breadcrumbs/next) -->
                         <div class="buttonSlider">
                             <button id="prev">
                                 <img src="img/Buttons/VectorArrow.svg" alt="prev arrow"> 
                             </button>
+                            <!-- breadcrumbs to guide/help the user -->
                             <div class="breadcrumbsDiv">
                                 <div class="breadcrumb"></div>
                                 <div class="breadcrumb"></div>
@@ -207,6 +223,7 @@
                                 <img src="img/Buttons/VectorArrow.svg" alt="next arrow">
                             </button>
                         </div>
+                        <!-- a container for the slides -->
                         <div class="sliderProposal">
                             <div class="slide">
                                 <h4>Live in the moment</h4>
@@ -220,28 +237,27 @@
                                 <h4>Locate the news in your timeline</h4>
                                 <p>With small keyboards and the main image you will know what it is at a glance, knowing when they happened</p>                
                             </div>
-                            <!-- <button id="prev">
-                                <img src="img/Buttons/VectorArrow.svg" alt="prev arrow"> 
-                            </button>
-                            <button id="next">
-                                <img src="img/Buttons/VectorArrow.svg" alt="next arrow">
-                            </button> -->
                          </div>
                     </div>     
                 </div>
             </div>
+            <!-- repeated background -->
             <img class="background1" src="img/Background-Looper.svg">
         </section>
         <!-- Section RIGHT NOW, dedicated to news/happening right now, as a sample -->
         <section id="rightNow">
+            <!-- again, a bigger div to control the content -->
             <div class="rightNow">
+                <!-- title -->
                 <div class="titleRightNow">
                     <h2>Happening <br> right now &#128293;</h2>
                 </div>
+                <!-- first slider. 1st row -->
                 <div class="sliderRightNow">
                     <div class="sliderWrap">
                     </div>
                 </div>
+                <!-- second slider. 2nd row -->
                 <div class="sliderRightNow">
                     <div class="sliderWrap">
                     </div>
@@ -250,7 +266,9 @@
         </section>
         <!-- Section ABOUT, dedicated to describe the purpose of the app + CONTACT (newsletter) form -->
         <section id="about">
+            <!-- a div to contain everything -->
             <div class="about">
+                <!-- brief explanation about us -->
                 <div class="aboutUs">
                     <div class="titleAbout">
                         <h2>About us</h2>
@@ -258,12 +276,15 @@
                     <div class="contentAbout">
                         <p>Information is not only a human need as a social animal, it is also a right. This is the origin of Verifal, whose creator, a vocational journalist, has developed to fight disinformation. Fight the fake news and give voice to all!</p>
                         <div class="faqsIntroduction">
+                            <!-- visual beginning for FAQS microsection -->
                             <h3>FAQS</h3>
                             <h4>Want to know how it works? <br> Let's see it</h4>
                         </div>
                     </div>
                 </div>
+                <!-- real beginning of FAQS microsection, container of dropdowns -->
                 <div class="faqs">
+                    <!-- cards with questions and answers as dropdowns -->
                     <div class="faqCard">
                         <h5>How can I join it?</h5>
                         <p class="answerFaq">It's pretty simple, you only have to download the Verifal app on your mobile device and register with a valid id</p>
@@ -285,14 +306,17 @@
                         <img src="img/Buttons/VectorArrow.svg" class="flippable" alt="arrow">
                     </div>
                 </div>
+                <!-- a container for subscriptions -->
                 <div class="formContainer">
                     <h2>Stay tunned! &#128140</h2>
                     <p>Daily news straight to your inbox</p>
                     <div class="subscribeContainer">
                         <div class="formContent">
+                            <!-- the form starts here -->
                             <form class="subscription">
                                 <input id="emailSubscribe" class="add-email" type="email" placeholder="subscribe@me.now">
                                 <button class="submit-email" type="button">
+                                    <!-- interaction -->
                                     <span class="before-submit">Subscribe</span>
                                     <span class="after-submit">Thank you for subscribing!</span>
                                 </button>
@@ -305,10 +329,14 @@
         <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>
         </div>
+        <!-- FOOTER -->
         <footer>
+            <!-- a div to control the footer content -->
             <div class="footercontent">
+                <!-- brand reference -->
                 <div class="brand">
                     <h2>Verifal</h2>
+                    <!-- SM buttons -->
                     <div class="social-networks">
                         <button>
                             <img src="img/icons/icon/sn-instagram.svg" alt="instagram button">
@@ -324,6 +352,7 @@
                         </button>
                     </div>
                 </div>
+                <!-- Containers of text in the footer -->
                 <div class="footerText">
                     <p>Made with &#128420; by Marta Villanueva</p>
                 </div>
